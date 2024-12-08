@@ -1,18 +1,18 @@
+<!-- omit in toc -->
 # Contribution Guide
 
 LSoft is an [open source](https://github.com/Linksofteu) project developed under MIT license. The main purpose of this project is to help share codebase for proprietary projects developed for [LinkSoft Technologies](https://www.linksoft.eu/). For contribution rules, please see the [Code Contribution](#code-contribution) guidelines.
 
+<!-- omit in toc -->
 ## Table of Contents
 
-- [Contribution Guide](#contribution-guide)
-  - [Table of Contents](#table-of-contents)
-  - [I Have a Question](#i-have-a-question)
-  - [Code Contribution](#code-contribution)
-  - [Bug reports and enhancements](#bug-reports-and-enhancements)
-    - [Submitting a Bug Report](#submitting-a-bug-report)
-    - [Suggesting Enhancements](#suggesting-enhancements)
-  - [Code of Conduct](#code-of-conduct)
-  - [Attribution](#attribution)
+- [I Have a Question](#i-have-a-question)
+- [Code Contribution](#code-contribution)
+- [Bug reports and enhancements](#bug-reports-and-enhancements)
+  - [Submitting a Bug Report](#submitting-a-bug-report)
+  - [Suggesting Enhancements](#suggesting-enhancements)
+- [Code of Conduct](#code-of-conduct)
+- [Attribution](#attribution)
 
 ## I Have a Question
 
