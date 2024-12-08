@@ -32,7 +32,7 @@ If you then still feel the need to ask a question and need clarification, we rec
 > ### Legal Notice
 > When contributing to this project, you must agree that you have authored 100% of the content, that you have the necessary rights to the content and that the content you contribute may be provided under the project licence.
 
-Do not create pull requests (either Bug Fixes or Enhancements) to the github repository without discussing the proposed changes with the repository owner beforehand. After agreeing on the scope and nature of the proposed changes, follow the contribution guide:
+Do not create pull requests (either Bug Fixes or Enhancements) to the github repository without discussing the proposed changes with the repository owner beforehand via the [issues page](https://github.com/Linksofteu/LSoft/issues). After agreeing on the scope and nature of the proposed changes, follow the contribution guide:
 
 - [Fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) the [LSoft repository](https://github.com/Linksofteu/LSoft) from GitHub.
 - Build the repository using the `/build/build-all.sh` or `/build/build-all.ps1` for one time.
