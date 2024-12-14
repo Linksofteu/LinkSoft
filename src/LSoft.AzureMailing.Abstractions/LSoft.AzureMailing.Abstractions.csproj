@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <PackageId>LSoft.AzureMailing.Abstractions</PackageId>
     <Version>0.0.2</Version>
-    <Company>Linksoft ltd</Company>
+    <Company>Linksoft Technologies</Company>
     <Authors>David Orolin</Authors>
     <Description>Abstractions for Azure Mailing</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
