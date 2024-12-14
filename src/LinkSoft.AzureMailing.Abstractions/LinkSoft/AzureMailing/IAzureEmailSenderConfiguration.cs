@@ -1,4 +1,4 @@
-namespace LSoft.AzureMailing;
+namespace LinkSoft.AzureMailing;
 
 public interface IAzureEmailSenderConfiguration
 {
