@@ -1,4 +1,6 @@
 #!/bin/bash
+# Set the working directory to the location of the script's file
+cd "$(dirname "$0")"
 
 # Ask the user to enter the type of package
 echo "Enter the type of package (A)bp or (S)hared:"

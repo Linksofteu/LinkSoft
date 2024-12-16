@@ -3,7 +3,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>{FullName}</PackageId>
+    <PackageId>LSoftTech.Abp.AzureMailing</PackageId>
     <Authors>Linksoft Technologies a.s.</Authors>
     <Copyright>Copyright © 2024 Linksoft Technologies a.s.</Copyright>
     <RepositoryUrl>https://github.com/Linksofteu/LinkSoft</RepositoryUrl>
@@ -13,17 +13,22 @@
     <PackageReadmeFile>readme.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryBranch>main</RepositoryBranch>
-    <Version>0.1.0</Version>
+    <Version>8.3.1-beta.1</Version>
     <PackageReleaseNotes>
     Initial release
     </PackageReleaseNotes>
     <Description>
-    {Description}
+    Package which implements AbpMailing shared package as an Abp module
     </Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="images/logo-linksoft.png" Pack="true" PackagePath="\"/>
-    <None Include="docs/readme.md" Pack="true" PackagePath="\"/>
+    <None Include="images/logo-linksoft.png" Pack="true" PackagePath="\" />
+    <None Include="docs/readme.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LSoftTech.AzureMailing" Version="0.3.0" />
+    <PackageReference Include="Volo.Abp.Emailing" Version="8.3.1" />
   </ItemGroup>
 </Project>

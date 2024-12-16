@@ -12,7 +12,8 @@ By default, the package reads the connection string from appsettings.json:
 
 Usage:
 ```csharp
-var sender = new AzureEmailSender();
+var configuration = new AzureEmailSenderConfiguration();
+var sender = new AzureEmailSender(configuration);
 
 var content = new EmailContent("Hello world!");
 content.PlainText = "Hello world message!";
