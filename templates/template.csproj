@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>{FullName}</PackageId>
+    <Authors>Linksoft Technologies a.s.</Authors>
+    <Copyright>Copyright © 2024 Linksoft Technologies a.s.</Copyright>
+    <RepositoryUrl>https://github.com/Linksofteu/LinkSoft</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>logo-linksoft.png</PackageIcon>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryBranch>main</RepositoryBranch>
+    <Version>0.1.0</Version>
+    <PackageReleaseNotes>
+    Initial release
+    </PackageReleaseNotes>
+    <Description>
+    Implementing service for sending emails using Azure Communication Services
+    </Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="images/logo-linksoft.png" Pack="true" PackagePath="\"/>
+    <None Include="docs/readme.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+</Project>

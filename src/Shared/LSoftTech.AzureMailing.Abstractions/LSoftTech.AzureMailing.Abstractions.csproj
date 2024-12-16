@@ -6,7 +6,6 @@
     <PackageId>LSoftTech.AzureMailing.Abstractions</PackageId>
     <Authors>Linksoft Technologies a.s.</Authors>
     <Copyright>Copyright © 2024 Linksoft Technologies a.s.</Copyright>
-    <Description>Abstractions for the LSoftTech.AzureMailing nuget package</Description>
     <RepositoryUrl>https://github.com/Linksofteu/LinkSoft</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -18,6 +17,9 @@
     <PackageReleaseNotes>
     Added a set of properties to the project file.
     </PackageReleaseNotes>
+    <Description>
+    Abstractions for the LSoftTech.AzureMailing nuget package
+    </Description>
   </PropertyGroup>
 
   <ItemGroup>
