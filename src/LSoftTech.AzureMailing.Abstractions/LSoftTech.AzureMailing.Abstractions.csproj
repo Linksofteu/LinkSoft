@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>LSoftTech.AzureMailing.Abstractions</PackageId>
+    <Authors>Linksoft Technologies a.s.</Authors>
+    <Copyright>Copyright © 2024 Linksoft Technologies a.s.</Copyright>
+    <Description>Abstractions for the LSoftTech.AzureMailing nuget package</Description>
+    <RepositoryUrl>https://github.com/Linksofteu/LinkSoft</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>logo-linksoft.png</PackageIcon>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryBranch>main</RepositoryBranch>
+    <Version>0.3.0</Version>
+    <PackageReleaseNotes>
+    Added a set of properties to the project file.
+    </PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Communication.Email" Version="1.0.1" />
+    <PackageReference Include="Azure.Core" Version="1.44.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="images/logo-linksoft.png" Pack="true" PackagePath="\"/>
+    <None Include="docs/readme.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+</Project>
