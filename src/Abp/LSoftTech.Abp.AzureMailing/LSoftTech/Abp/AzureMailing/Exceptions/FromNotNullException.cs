@@ -1,6 +1,6 @@
 using Volo.Abp;
 
-namespace SZ.AmendmentSheets.Mailing.AzureMailing;
+namespace LSoftTech.Abp.AzureMailing.Exceptions;
 
 public class FromNotNullException : UserFriendlyException
 {
