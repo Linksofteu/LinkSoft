@@ -3,7 +3,6 @@ Repository for open source Linksoft shared libraries
 
 ## Create a new package
 Run either the utils/add-packate.sh or utils/add-package.pw1 script. It will prompt you for:
-- Type of package
 - Name of the package
 - Package description
 
