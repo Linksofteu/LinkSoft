@@ -1,11 +1,5 @@
-# Ask the user to enter the type of package
-$package_type = Read-Host "Enter the type of package ((A)bp or (S)hared)"
-
-# Validate the input
-if ($package_type -ne "A" -and $package_type -ne "S") {
-    Write-Host "Invalid package type. Please enter either 'A' for Abp or 'S' for Shared."
-    exit 1
-}
+# Set the working directory to the location of the script's file
+Set-Location -Path (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 # Ask the user to enter the name of the package
 $package_name = Read-Host "Enter the name of the package"
@@ -13,14 +7,8 @@ $package_name = Read-Host "Enter the name of the package"
 # Ask the user to enter the description of the package
 $package_description = Read-Host "Enter the description of the package"
 
-# Determine the target namespace and folder based on the package type
-if ($package_type -eq "A") {
-    $target_namespace = "LinkSoft.Abp.$package_name"
-    $target_folder = "../src/Abp/$target_namespace"
-} else {
-    $target_namespace = "LinkSoft.$package_name"
-    $target_folder = "../src/Shared/$target_namespace"
-}
+$target_namespace = "LinkSoft.$package_name"
+$target_folder = "../src/$target_namespace"
 
 # Copy all files from the templates folder to the target folder
 New-Item -ItemType Directory -Force -Path $target_folder
@@ -36,10 +24,6 @@ Rename-Item -Path "$target_folder/template.csproj" -NewName "$target_namespace.c
 (Get-Content "$target_folder/$target_namespace.csproj") -replace '{Description}', $package_description | Set-Content "$target_folder/$target_namespace.csproj"
 
 # Create the folder structure in the same folder as the .csproj
-if ($package_type -eq "A") {
-    New-Item -ItemType Directory -Force -Path "$target_folder/LinkSoft/Abp/$package_name"
-} else {
-    New-Item -ItemType Directory -Force -Path "$target_folder/LinkSoft/$package_name"
-}
+New-Item -ItemType Directory -Force -Path "$target_folder/LinkSoft/$package_name"
 
 Write-Host "Package setup completed successfully."
