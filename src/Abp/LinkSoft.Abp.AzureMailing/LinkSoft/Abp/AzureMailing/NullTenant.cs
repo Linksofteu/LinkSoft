@@ -1,7 +1,7 @@
 using Volo.Abp;
 using Volo.Abp.MultiTenancy;
 
-namespace LSoftTech.Abp.AzureMailing;
+namespace LinkSoft.Abp.AzureMailing;
 
 public class NullTenant : ICurrentTenant
 {

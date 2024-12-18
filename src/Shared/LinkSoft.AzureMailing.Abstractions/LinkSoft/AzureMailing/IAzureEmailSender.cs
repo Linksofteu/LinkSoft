@@ -1,6 +1,6 @@
 ﻿using Azure.Communication.Email;
 
-namespace LSoftTech.AzureMailing;
+namespace LinkSoft.AzureMailing;
 
 public interface IAzureEmailSender
 {

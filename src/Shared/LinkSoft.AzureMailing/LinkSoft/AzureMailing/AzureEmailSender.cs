@@ -1,7 +1,7 @@
 using Azure;
 using Azure.Communication.Email;
 
-namespace LSoftTech.AzureMailing;
+namespace LinkSoft.AzureMailing;
 
 public class AzureEmailSender(IAzureEmailSenderConfiguration _configuration) : IAzureEmailSender
 {

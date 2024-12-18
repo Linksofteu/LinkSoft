@@ -3,9 +3,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Emailing;
 using Volo.Abp.Modularity;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using LSoftTech.AzureMailing;
+using LinkSoft.AzureMailing;
 
-namespace LSoftTech.Abp.AzureMailing;
+namespace LinkSoft.Abp.AzureMailing;
 
 [DependsOn(typeof(AbpEmailingModule))]
 public class AzureMailingModule : AbpModule

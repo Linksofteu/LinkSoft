@@ -1,9 +1,9 @@
 using Microsoft.Extensions.Configuration;
-using LSoftTech.Abp.AzureMailing.Exceptions;
+using LinkSoft.Abp.AzureMailing.Exceptions;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.Emailing;
 
-namespace LSoftTech.Abp.AzureMailing;
+namespace LinkSoft.Abp.AzureMailing;
 
 public class AbpAzureEmailSenderConfiguration(IConfiguration _configuration) : IEmailSenderConfiguration, ITransientDependency
 {

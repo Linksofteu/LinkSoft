@@ -15,10 +15,10 @@ $package_description = Read-Host "Enter the description of the package"
 
 # Determine the target namespace and folder based on the package type
 if ($package_type -eq "A") {
-    $target_namespace = "LSoftTech.Abp.$package_name"
+    $target_namespace = "LinkSoft.Abp.$package_name"
     $target_folder = "../src/Abp/$target_namespace"
 } else {
-    $target_namespace = "LSoftTech.$package_name"
+    $target_namespace = "LinkSoft.$package_name"
     $target_folder = "../src/Shared/$target_namespace"
 }
 
@@ -37,9 +37,9 @@ Rename-Item -Path "$target_folder/template.csproj" -NewName "$target_namespace.c
 
 # Create the folder structure in the same folder as the .csproj
 if ($package_type -eq "A") {
-    New-Item -ItemType Directory -Force -Path "$target_folder/LSoftTech/Abp/$package_name"
+    New-Item -ItemType Directory -Force -Path "$target_folder/LinkSoft/Abp/$package_name"
 } else {
-    New-Item -ItemType Directory -Force -Path "$target_folder/LSoftTech/$package_name"
+    New-Item -ItemType Directory -Force -Path "$target_folder/LinkSoft/$package_name"
 }
 
 Write-Host "Package setup completed successfully."

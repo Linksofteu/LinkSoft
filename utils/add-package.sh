@@ -22,10 +22,10 @@ read package_description
 
 # Determine the target namespace and folder based on the package type
 if [[ "$package_type" == "A" ]]; then
-  target_namespace="LSoftTech.Abp.$package_name"
+  target_namespace="LinkSoft.Abp.$package_name"
   target_folder="../src/Abp/$target_namespace"
 else
-  target_namespace="LSoftTech.$package_name"
+  target_namespace="LinkSoft.$package_name"
   target_folder="../src/Shared/$target_namespace"
 fi
 
@@ -44,9 +44,9 @@ sed -i "s/{Description}/$package_description/g" "$target_folder/$target_namespac
 
 # Create the folder structure in the same folder as the .csproj
 if [[ "$package_type" == "A" ]]; then
-  mkdir -p "$target_folder/LSoftTech/Abp/$package_name"
+  mkdir -p "$target_folder/LinkSoft/Abp/$package_name"
 else
-  mkdir -p "$target_folder/LSoftTech/$package_name"
+  mkdir -p "$target_folder/LinkSoft/$package_name"
 fi
 
 echo "Package setup completed successfully."

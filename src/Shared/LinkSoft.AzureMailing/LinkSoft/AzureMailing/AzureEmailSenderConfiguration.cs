@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Configuration;
 
-namespace LSoftTech.AzureMailing;
+namespace LinkSoft.AzureMailing;
 
 public class AzureEmailSenderConfiguration(IConfiguration _configuration) : IAzureEmailSenderConfiguration
 {

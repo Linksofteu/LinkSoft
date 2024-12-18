@@ -3,7 +3,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>LSoftTech.AzureMailing.Abstractions</PackageId>
+    <PackageId>LinkSoft.AzureMailing.Abstractions</PackageId>
     <Authors>Linksoft Technologies a.s.</Authors>
     <Copyright>Copyright © 2024 Linksoft Technologies a.s.</Copyright>
     <RepositoryUrl>https://github.com/Linksofteu/LinkSoft</RepositoryUrl>
@@ -18,7 +18,7 @@
     Added a set of properties to the project file.
     </PackageReleaseNotes>
     <Description>
-    Abstractions for the LSoftTech.AzureMailing nuget package
+    Abstractions for the LinkSoft.AzureMailing nuget package
     </Description>
   </PropertyGroup>
 

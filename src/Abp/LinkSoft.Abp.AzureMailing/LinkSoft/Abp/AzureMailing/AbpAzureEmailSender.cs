@@ -4,10 +4,10 @@ using Volo.Abp.DependencyInjection;
 using Volo.Abp.Emailing;
 using Azure.Communication.Email;
 using Microsoft.Extensions.Logging;
-using LSoftTech.Abp.AzureMailing.Exceptions;
-using LSoftTech.AzureMailing;
+using LinkSoft.Abp.AzureMailing.Exceptions;
+using LinkSoft.AzureMailing;
 
-namespace LSoftTech.Abp.AzureMailing;
+namespace LinkSoft.Abp.AzureMailing;
 
 [Dependency(ReplaceServices = true)]
 [ExposeServices(typeof(AbpAzureEmailSender))]

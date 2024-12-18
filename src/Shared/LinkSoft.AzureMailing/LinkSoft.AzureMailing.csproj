@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>LSoftTech.Abp.AzureMailing</PackageId>
+    <PackageId>LinkSoft.AzureMailing</PackageId>
     <Authors>Linksoft Technologies a.s.</Authors>
     <Copyright>Copyright © 2024 Linksoft Technologies a.s.</Copyright>
     <RepositoryUrl>https://github.com/Linksofteu/LinkSoft</RepositoryUrl>
@@ -13,22 +13,22 @@
     <PackageReadmeFile>readme.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryBranch>main</RepositoryBranch>
-    <Version>8.3.1-beta.1</Version>
+    <Version>0.3.0</Version>
     <PackageReleaseNotes>
-    Initial release
+    Added a set of properties to the project file.
     </PackageReleaseNotes>
     <Description>
-    Package which implements AbpMailing shared package as an Abp module
+    Implementing service for sending emails using Azure Communication Services
     </Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="images/logo-linksoft.png" Pack="true" PackagePath="\" />
-    <None Include="docs/readme.md" Pack="true" PackagePath="\" />
+    <PackageReference Include="LinkSoft.AzureMailing.Abstractions" Version="0.3.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="LSoftTech.AzureMailing" Version="0.3.0" />
-    <PackageReference Include="Volo.Abp.Emailing" Version="8.3.1" />
+    <None Include="images/logo-linksoft.png" Pack="true" PackagePath="\"/>
+    <None Include="docs/readme.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 </Project>
