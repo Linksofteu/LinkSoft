@@ -13,7 +13,7 @@
     <PackageReadmeFile>readme.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryBranch>main</RepositoryBranch>
-    <Version>0.3.0</Version>
+    <Version>1.0.0</Version>
     <PackageReleaseNotes>
     Added a set of properties to the project file.
     </PackageReleaseNotes>
@@ -23,7 +23,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LinkSoft.AzureMailing.Abstractions" Version="0.3.0" />
+    <PackageReference Include="LinkSoft.AzureMailing.Abstractions" Version="1.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.0" />
   </ItemGroup>
 

@@ -26,6 +26,16 @@ var message = new EmailMessage(
 await sender.SendEmailAsync(message);
 ```
 
+If you wish to change the source of the connection string, create your own implementation of the IAzureEmailSenderConfiguration interface:
+```csharp
+namespace LinkSoft.AzureMailing;
+
+public class MyAzureEmailSenderConfiguration(IConfiguration _configuration) : IAzureEmailSenderConfiguration
+{
+    public string? AzureEmailSenderConnectionString => "MyConnectionStringSource";
+}
+```
+
 This package is a part of larger set of packages for LinkSoft Technologies shared open source repository.
 
 You can find the repository on [GitHub](https://github.com/Linksofteu/LinkSoft).
