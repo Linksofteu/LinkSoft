@@ -26,7 +26,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LinkSoft.AzureMailing.Abstractions" Version="1.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../LinkSoft.AzureMailing.Abstractions/LinkSoft.AzureMailing.Abstractions.csproj" />
   </ItemGroup>
 </Project>
