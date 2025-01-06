@@ -1,18 +1,14 @@
 name: Build & Test
 
 on:
-  push:
-    branches:
-      - master
   pull_request:
-    branches:
-      - master
+    branches: [ 'main' ]
 
 env:
   DOTNET_VERSION: '8.0'
 
 jobs:
-  build:
+  build_test:
     runs-on: ubuntu-latest
 
     steps:
