@@ -26,4 +26,7 @@ Rename-Item -Path "$target_folder/template.csproj" -NewName "$target_namespace.c
 # Create the folder structure in the same folder as the .csproj
 New-Item -ItemType Directory -Force -Path "$target_folder/LinkSoft/$package_name"
 
+# Add the newly created .csproj file to the solution file
+& dotnet sln ../LinkSoft.sln add "$target_folder/$target_namespace.csproj"
+
 Write-Host "Package setup completed successfully."

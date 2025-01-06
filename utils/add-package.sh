@@ -29,4 +29,7 @@ sed -i "s/{Description}/$package_description/g" "$target_folder/$target_namespac
 # Create the folder structure in the same folder as the .csproj
 mkdir -p "$target_folder/LinkSoft/$package_name"
 
+# Add the newly created .csproj file to the solution file
+dotnet sln ../LinkSoft.sln add "$target_folder/$target_namespace.csproj"
+
 echo "Package setup completed successfully."
