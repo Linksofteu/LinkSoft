@@ -1,4 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="../../common/common.props" />
+
   <PropertyGroup>
     <PackageId>{FullName}</PackageId>
     <Description>{Description}</Description>
