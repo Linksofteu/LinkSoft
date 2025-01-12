@@ -1,0 +1,56 @@
+name: Publish NuGet Packages
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Extract version from tag
+      id: extract_version
+      run: echo "::set-output name=version::${GITHUB_REF/refs\/tags\/v/}"
+
+    - name: Extract .NET version from common.props
+      id: extract_dotnet_version
+      run: echo "::set-output name=dotnet_version::$(xmllint --xpath "string(//Project/PropertyGroup/TargetFramework)" common/common.props)"
+
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ steps.extract_version.outputs.dotnet_version }}
+
+    - name: Update version in common.props
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git checkout -b "release-v${{ steps.extract_version.outputs.version }}"
+        sed -i "s/<Version>.*<\/Version>/<Version>${{ steps.extract_version.outputs.version }}<\/Version>/" common/common.props
+        git add common/common.props
+        git commit -m "Update version to ${{ steps.extract_version.outputs.version }}"
+        git push origin "release-v${{ steps.extract_version.outputs.version }}"
+        gh pr create --title "Release v${{ steps.extract_version.outputs.version }}" --body "This PR updates the version to v${{ steps.extract_version.outputs.version }}" --base main --head "release-v${{ steps.extract_version.outputs.version }}"
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build and pack projects
+      run: |
+        mkdir -p nuget_packages
+        for csproj in $(find src -name '*.csproj'); do
+          dotnet pack "$csproj" --configuration Release --output nuget_packages
+        done
+
+    - name: Publish to NuGet
+      env:
+        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+      run: |
+        for nupkg in nuget_packages/*.nupkg; do
+          dotnet nuget push "$nupkg" --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json
+        done
