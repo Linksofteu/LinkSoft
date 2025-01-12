@@ -7,7 +7,6 @@
     <Copyright>Copyright © 2024 Linksoft Technologies a.s.</Copyright>
     <RepositoryUrl>https://github.com/Linksofteu/LinkSoft</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageIcon>logo-linksoft.png</PackageIcon>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
