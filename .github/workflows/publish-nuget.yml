@@ -27,6 +27,8 @@ jobs:
         dotnet-version: ${{ steps.extract_version.outputs.dotnet_version }}
 
     - name: Update version in common.props
+      env:
+        GH_TOKEN: ${{ github.token }}
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
