@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*.*.*'
 
+env:
+  DOTNET_VERSION: '9.0'
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -17,14 +20,10 @@ jobs:
       id: extract_version
       run: echo "::set-output name=version::${GITHUB_REF/refs\/tags\/v/}"
 
-    - name: Extract .NET version from common.props 📄
-      id: extract_dotnet_version
-      run: echo "::set-output name=dotnet_version::$(xmllint --xpath "string(//Project/PropertyGroup/TargetFramework)" common/common.props)"
-
-    - name: Set up .NET ⚙️
-      uses: actions/setup-dotnet@v4
+    - name: Set up .NET 📦
+      uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: ${{ steps.extract_dotnet_version.outputs.dotnet_version }}
+        dotnet-version: ${{ env.DOTNET_VERSION }}
 
     - name: Update version in common.props 🔄
       run: |
