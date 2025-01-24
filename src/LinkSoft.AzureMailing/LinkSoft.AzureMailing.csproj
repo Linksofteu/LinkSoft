@@ -5,7 +5,7 @@
   <PropertyGroup>
     <PackageId>LinkSoft.AzureMailing</PackageId>
     <PackageReleaseNotes>
-    Added a set of properties to the project file.
+    Updated dotnet version; Updated dependencies.
     </PackageReleaseNotes>
     <Description>
     Implementing service for sending emails using Azure Communication Services
@@ -13,7 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.1" />
   </ItemGroup>
 
   <ItemGroup>

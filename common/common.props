@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Authors>Linksoft Technologies a.s.</Authors>
@@ -12,6 +12,12 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryBranch>main</RepositoryBranch>
     <Version>1.0.2</Version>
+    <!-- Enable NuGet package auditing -->
+    <NuGetAudit>true</NuGetAudit>
+    <!-- Audit direct and transitive packages -->
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <!-- Report low, moderate, high and critical advisories -->
+    <NuGetAuditLevel>low</NuGetAuditLevel>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">

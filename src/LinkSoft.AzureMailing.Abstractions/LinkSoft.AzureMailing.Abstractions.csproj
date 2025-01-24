@@ -5,7 +5,7 @@
   <PropertyGroup>
     <PackageId>LinkSoft.AzureMailing.Abstractions</PackageId>
     <PackageReleaseNotes>
-    Added a set of properties to the project file.
+    Updated dotnet version.
     </PackageReleaseNotes>
     <Description>
     Abstractions for the LinkSoft.AzureMailing nuget package
