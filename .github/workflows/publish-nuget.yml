@@ -8,6 +8,11 @@ on:
 env:
   DOTNET_VERSION: '9.0'
 
+# Explicitly declare permissions
+permissions:
+  contents: write  # Needed for checkout and creating branches
+  pull-requests: write  # Needed for creating PRs
+
 jobs:
   publish:
     runs-on: ubuntu-latest
