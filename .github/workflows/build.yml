@@ -7,6 +7,11 @@ on:
 env:
   DOTNET_VERSION: '9.0'
 
+# Explicitly declare permissions
+permissions:
+  contents: read
+  checks: write # For test results
+
 jobs:
   build_test:
     runs-on: ubuntu-latest
