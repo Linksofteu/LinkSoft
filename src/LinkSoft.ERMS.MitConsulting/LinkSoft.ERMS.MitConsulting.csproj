@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>LinkSoft.ERMS.MitConsulting</PackageId>
+    <Description>Specific ERMS Implementation for MIT Consulting </Description>
+    <PackageReleaseNotes>Init</PackageReleaseNotes>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Authors>Linksoft Technologies a.s.</Authors>
+		<Copyright>Copyright © 2024 Linksoft Technologies a.s.</Copyright>
+		<RepositoryUrl>https://github.com/Linksofteu/LinkSoft</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageIcon>logo-linksoft.png</PackageIcon>
+		<PackageReadmeFile>readme.md</PackageReadmeFile>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<RepositoryBranch>main</RepositoryBranch>
+		<Version>9.1.0</Version>
+		<!-- Enable NuGet package auditing -->
+		<NuGetAudit>true</NuGetAudit>
+		<!-- Audit direct and transitive packages -->
+		<NuGetAuditMode>all</NuGetAuditMode>
+		<!-- Report low, moderate, high and critical advisories -->
+		<NuGetAuditLevel>low</NuGetAuditLevel>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="images\**" />
+    <EmbeddedResource Remove="images\**" />
+    <None Remove="images\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="docs/readme.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LinkSoft.ERMS\LinkSoft.ERMS.csproj" />
+  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="SoapCore" Version="1.2.1.8" />
+	</ItemGroup>
+</Project>
