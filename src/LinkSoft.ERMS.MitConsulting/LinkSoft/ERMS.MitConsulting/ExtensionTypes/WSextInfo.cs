@@ -2211,7 +2211,7 @@ namespace LinkSoft.ERMS.MITConsulting {
 
         private string identifikatorDokumentAnalogovyField;
 
-        private tFileLinksArray odkazyNaSouboryField;
+        private tFileLink[] odkazyNaSouboryField;
 
         private KonverzeDokumentuPotvrzeniShody potvrzeniShodyField;
 
@@ -2249,7 +2249,7 @@ namespace LinkSoft.ERMS.MITConsulting {
         }
 
         /// <remarks/>
-        public tFileLinksArray OdkazyNaSoubory
+        public tFileLink[] OdkazyNaSoubory
         {
             get
             {
@@ -2312,26 +2312,6 @@ namespace LinkSoft.ERMS.MITConsulting {
                 this.autorizaceField = value;
             }
         }
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.mvcr.cz/nsesss/2024/api")]
-    public partial class tFile
-    {
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.mvcr.cz/nsesss/2024/api")]
-    public partial class tFileLinksArray
-    {
     }
 
     /// <remarks/>
@@ -3477,46 +3457,6 @@ namespace LinkSoft.ERMS.MITConsulting {
             set
             {
                 this.datumCasZneplatneniFieldSpecified = value;
-            }
-        }
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.mvcr.cz/nsesss/2024/api")]
-    public partial class tOperaceStatus
-    {
-
-        private string kodField;
-
-        private string popisField;
-
-        /// <remarks/>
-        public string Kod
-        {
-            get
-            {
-                return this.kodField;
-            }
-            set
-            {
-                this.kodField = value;
-            }
-        }
-
-        /// <remarks/>
-        public string Popis
-        {
-            get
-            {
-                return this.popisField;
-            }
-            set
-            {
-                this.popisField = value;
             }
         }
     }
