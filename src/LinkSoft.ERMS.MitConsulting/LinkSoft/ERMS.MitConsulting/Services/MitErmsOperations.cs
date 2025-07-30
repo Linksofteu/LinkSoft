@@ -31,6 +31,20 @@ public class MitErmsOperations(IErmsService ermsService, IOptions<ErmsOperations
 
         return OdeslatUdalostiSyn(builder);
     }
+    public Task<Result> PodpisSchvaleniSchvaleno(string idKomponenty)
+    {
+        var builder = new DavkaBuilder()
+            .PodpisSchvaleniSchvaleno(idKomponenty);
+
+        return OdeslatUdalostiSyn(builder);
+    }
+    public Task<Result> PodpisSchvaleniOdmitnuto(string idKomponenty, string? oduvodneni = null)
+    {
+        var builder = new DavkaBuilder()
+            .PodpisSchvaleniOdmitnuto(idKomponenty, oduvodneni);
+
+        return OdeslatUdalostiSyn(builder);
+    }
 
     public Task<Result> PodpisZruseni(string idKomponenty, string? oduvodneni = null)
     {

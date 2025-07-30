@@ -2,350 +2,520 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://mit-consulting.cz/erms-ext"
            xmlns:tns="http://www.mvcr.cz/nsesss/2024/api" targetNamespace="http://mit-consulting.cz/erms-ext"
            elementFormDefault="qualified">
-    <xs:import namespace="http://www.mvcr.cz/nsesss/2024/api" schemaLocation="BlankScheme.xsd"/>
-    <xs:include schemaLocation="WSextInfo.xsd"/>
-    <xs:element name="ExterniCiselnikNaplneni">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="ExterniCiselnik" maxOccurs="1" minOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Struktura pro naplnění externího číselníku.
-                                </xs:documentation>
-                    </xs:annotation>
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="CiselnikPolozka" maxOccurs="unbounded" minOccurs="0">
-                                <xs:annotation>
-                                    <xs:documentation>
-Položka externího číselníku.
-                                </xs:documentation>
-                                </xs:annotation>
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="Klic" maxOccurs="1" minOccurs="1">
-                                            <xs:annotation>
-                                                <xs:documentation>
-Klíč položky.
-                                </xs:documentation>
-                                            </xs:annotation>
-                                            <xs:simpleType>
-                                                <xs:restriction base="xs:string"/>
-                                            </xs:simpleType>
-                                        </xs:element>
-                                        <xs:element name="Hodnota" maxOccurs="1" minOccurs="1">
-                                            <xs:annotation>
-                                                <xs:documentation>
-Hodnota položky.
-                                </xs:documentation>
-                                            </xs:annotation>
-                                            <xs:simpleType>
-                                                <xs:restriction base="xs:string"/>
-                                            </xs:simpleType>
-                                        </xs:element>
-                                    </xs:sequence>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                        <xs:attribute name="CiselnikIdentifikator" type="xs:string" use="required"/>
-                        <xs:attribute name="CiselnikHeslo" type="xs:string" use="required"/>
-                    </xs:complexType>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="KonverzeDokumentu">
-        <xs:annotation>
-            <xs:documentation>
-Žádost o provedení konverze dokumentu.
-            </xs:documentation>
-        </xs:annotation>
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="ZalozeniSouboru" type="tns:tFile" minOccurs="0" maxOccurs="unbounded">
-                    <xs:annotation>
-                        <xs:documentation>
-Seznam souborů, které se mají založit.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="IdentifikatorDokumentAnalogovy" type="xs:string" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Identifikátor analogového dokumentu.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="OdkazyNaSoubory" type="tns:tFileLinksArray" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Odkazy na soubory. Vztah komponent vzhledem k dokumentu. Main je právě jedna. Enclosure podle počtu příloh uvedených u analogového dokumentu.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="PotvrzeniShody" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Ověření, že  dokument  vzniklý  převedením  vstupu  v  listinné  podobě  do podoby  elektronické,  se  doslovně  shoduje  s  obsahem  vstupu.
-            </xs:documentation>
-                    </xs:annotation>
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:enumeration value="ano"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
-                <xs:element name="OkamziteZniceniAnalogoveCasti" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Příznak, jestli má dojít k okamžitému zničení analogové části dokumentu.
-            </xs:documentation>
-                    </xs:annotation>
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:enumeration value="ano"/>
-                            <xs:enumeration value="ne"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
-                <xs:element name="TypKonverze" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Typ požadované konverze.
-            </xs:documentation>
-                    </xs:annotation>
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:enumeration value="NeautorizovanaAnalogDigital"/>
-                            <xs:enumeration value="NeautorizovanaDigitalAnalog"/>
-                            <xs:enumeration value="AutorizovanaAnalogDigital"/>
-                            <xs:enumeration value="AutorizovanaDigitalAnalog"/>
-                            <xs:enumeration value="ZMociUredniAnalogDigital"/>
-                            <xs:enumeration value="ZMociUredniDigitalAnalog"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
-                <xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Autorizace volání.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="OdebratZPodpisoveKnihy">
-        <xs:annotation>
-            <xs:documentation>
-Žádost o stažení žádosti o podpis.
-            </xs:documentation>
-        </xs:annotation>
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="KomponentaId" type="xs:string" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Identifikátor komponenty.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="Oduvodneni" type="xs:string" minOccurs="0" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Odůvodnění.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Autorizace volání.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="OdebratZpristupneni">
-        <xs:annotation>
-            <xs:documentation>
-Žádost o odebrání přístupu k objektu
-            </xs:documentation>
-        </xs:annotation>
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="Zpristupneni" type="Zpristupneni" minOccurs="1" maxOccurs="unbounded">
-                    <xs:annotation>
-                        <xs:documentation>
-Přístup k objektu.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Autorizace volání.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="PodpisZruseni">
-        <xs:annotation>
-            <xs:documentation>
-Žádost o odpojení komponenty typu podpis.
-            </xs:documentation>
-        </xs:annotation>
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="KomponentaId" type="xs:string" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Identifikátor komponenty.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="Oduvodneni" type="xs:string" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Odůvodnění.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Autorizace volání.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="PredatDoPodpisoveKnihy">
-        <xs:annotation>
-            <xs:documentation>
-Žádost o podpis.
-            </xs:documentation>
-        </xs:annotation>
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="KomponentaId" type="xs:string" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Identifikátor komponenty.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="Poznamka" type="xs:string" minOccurs="0" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Poznámka pro podepisujícího.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="PodepisujiciId" type="xs:string" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Identifikátor podepisujícího.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="VizualizacePodpisu" type="VizualizacePodpisu" minOccurs="0" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Vizualizace podpisu.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Autorizace volání.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="PredatDoPodpisoveKnihyExterni">
-        <xs:annotation>
-            <xs:documentation>
-Žádost o externí podpis.
-            </xs:documentation>
-        </xs:annotation>
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="KomponentaId" type="xs:string" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Identifikátor komponenty.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="Poznamka" type="xs:string" minOccurs="0" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Poznámka pro podepisujícího.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="PodepisujiciMail" type="xs:string" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-E-mail podepisujícího.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="PodepisujiciTelefon" type="xs:string" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Telefon podepisujícího.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="VizualizacePodpisu" type="VizualizacePodpisu" minOccurs="0" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Vizualizace podpisu.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Autorizace volání.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>   
-    <xs:element name="UdelitZpristupneni">
-        <xs:annotation>
-            <xs:documentation>
-Žádost o udělení přístupu k objektu.
-            </xs:documentation>
-        </xs:annotation>
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="Zpristupneni" type="Zpristupneni" minOccurs="1" maxOccurs="unbounded">
-                    <xs:annotation>
-                        <xs:documentation>
-Přístup k objektu.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation>
-Autorizace volání.
-            </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
+	<xs:import namespace="http://www.mvcr.cz/nsesss/2024/api" schemaLocation="BlankScheme.xsd"/>
+	<xs:include schemaLocation="WSextInfo.xsd"/>
+	<xs:element name="ExterniCiselnikNaplneni">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ExterniCiselnik" maxOccurs="1" minOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Struktura pro naplnění externího číselníku.
+						</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CiselnikPolozka" maxOccurs="unbounded" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>
+										Položka externího číselníku.
+									</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Klic" maxOccurs="1" minOccurs="1">
+											<xs:annotation>
+												<xs:documentation>
+													Klíč položky.
+												</xs:documentation>
+											</xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:string"/>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="Hodnota" maxOccurs="1" minOccurs="1">
+											<xs:annotation>
+												<xs:documentation>
+													Hodnota položky.
+												</xs:documentation>
+											</xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:string"/>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="CiselnikIdentifikator" type="xs:string" use="required"/>
+						<xs:attribute name="CiselnikHeslo" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="KonverzeDokumentu">
+		<xs:annotation>
+			<xs:documentation>
+				Žádost o provedení konverze dokumentu.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ZalozeniSouboru" type="tns:tFile" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>
+							Seznam souborů, které se mají založit.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="IdentifikatorDokumentAnalogovy" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor analogového dokumentu.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="OdkazyNaSoubory" type="tns:tFileLinksArray" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Odkazy na soubory. Vztah komponent vzhledem k dokumentu. Main je právě jedna. Enclosure
+							podle počtu příloh uvedených u analogového dokumentu.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="PotvrzeniShody" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Ověření, že dokument vzniklý převedením vstupu v listinné podobě do podoby elektronické, se
+							doslovně shoduje s obsahem vstupu.
+						</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="ano"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="OkamziteZniceniAnalogoveCasti" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Příznak, jestli má dojít k okamžitému zničení analogové části dokumentu.
+						</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="ano"/>
+							<xs:enumeration value="ne"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="TypKonverze" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Typ požadované konverze.
+						</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="NeautorizovanaAnalogDigital"/>
+							<xs:enumeration value="NeautorizovanaDigitalAnalog"/>
+							<xs:enumeration value="AutorizovanaAnalogDigital"/>
+							<xs:enumeration value="AutorizovanaDigitalAnalog"/>
+							<xs:enumeration value="ZMociUredniAnalogDigital"/>
+							<xs:enumeration value="ZMociUredniDigitalAnalog"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Autorizace volání.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OdebratZPodpisoveKnihy">
+		<xs:annotation>
+			<xs:documentation>
+				Žádost o stažení žádosti o podpis.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="KomponentaId" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor komponenty.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Oduvodneni" type="xs:string" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Odůvodnění.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Autorizace volání.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OdebratZpristupneni">
+		<xs:annotation>
+			<xs:documentation>
+				Žádost o odebrání přístupu k objektu
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Zpristupneni" type="Zpristupneni" minOccurs="1" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>
+							Přístup k objektu.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Autorizace volání.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PodpisOdmitnuti">
+		<xs:annotation>
+			<xs:documentation>
+				Odmítnutí podpisu.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Oduvodneni" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Odůvodnění.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="KomponentaId" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor komponenty.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Autorizace volání.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PodpisSchvaleniOdmitnuto">
+		<xs:annotation>
+			<xs:documentation>
+				Odmítnutí schválení podpisu.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Oduvodneni" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Odůvodnění.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="KomponentaId" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor komponenty.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Autorizace volání.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PodpisSchvaleniSchvaleno">
+		<xs:annotation>
+			<xs:documentation>
+				Schválení podpisu.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="KomponentaId" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor komponenty.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Autorizace volání.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PodpisZruseni">
+		<xs:annotation>
+			<xs:documentation>
+				Žádost o odpojení komponenty typu podpis.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="KomponentaId" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor komponenty.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Oduvodneni" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Odůvodnění.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Autorizace volání.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PredatDoPodpisoveKnihy">
+		<xs:annotation>
+			<xs:documentation>
+				Žádost o podpis.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="KomponentaId" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor komponenty.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Poznamka" type="xs:string" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Poznámka pro podepisujícího.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="PodepisujiciId" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor podepisujícího.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="VizualizacePodpisu" type="VizualizacePodpisu" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Vizualizace podpisu.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Autorizace volání.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PredatDoPodpisoveKnihyExterni">
+		<xs:annotation>
+			<xs:documentation>
+				Žádost o externí podpis.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="KomponentaId" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor komponenty.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Poznamka" type="xs:string" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Poznámka pro podepisujícího.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="PodepisujiciMail" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							E-mail podepisujícího.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="PodepisujiciTelefon" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Telefon podepisujícího.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="VizualizacePodpisu" type="VizualizacePodpisu" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Vizualizace podpisu.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Autorizace volání.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PripojeniVerzeKomponenty">
+		<xs:annotation>
+			<xs:documentation>
+				Připojení nové verze komponenty, například podpisu.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="IdentifikatorRodic" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor rodičovské komponenty.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="IdentifikatorKomponenta" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor připojované verze komponenty.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="TypKomponenty" type="xs:string" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Význam připojované komponenty. Např. podpis nebo pečeť.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Autorizace volání.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ProtokolOvereniZadostRequest">
+		<xs:annotation>
+			<xs:documentation>
+				Žádost o protokol ověření bezpečnostních prvků.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="IdentifikatorKomponenta" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor komponenty
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Autorizace volání.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attributeGroup ref="tns:gZdrojCil"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ProtokolOvereniZadostResponse">
+		<xs:annotation>
+			<xs:documentation>
+				Výsledek žádosti o protokol ověření bezpečnostních prvků.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="VysledekOvereni" type="VysledekOvereni" minOccurs="0" maxOccurs="1">
+				</xs:element>
+				<xs:element name="OperaceStatus" type="tns:tOperaceStatus"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UdelitZpristupneni">
+		<xs:annotation>
+			<xs:documentation>
+				Žádost o udělení přístupu k objektu.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Zpristupneni" type="Zpristupneni" minOccurs="1" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>
+							Přístup k objektu.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Autorizace volání.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 </xs:schema>

@@ -8,6 +8,7 @@ partial class KomponentaNovaVerze : IUdalostOstatni { }
 partial class OdebraniZpristupneni : IUdalostOstatni { }
 partial class PodpisovaKnihaOdmitnuto : IUdalostOstatni { }
 partial class PodpisovaKnihaPodepsano : IUdalostOstatni { }
+partial class PodpisovaKnihaZadostSchvaleni : IUdalostOstatni { }
 partial class UdeleniZpristupneni : IUdalostOstatni, IErmsAutorizace { }
 
 
@@ -18,4 +19,6 @@ partial class OdebratZpristupneni : IUdalostOstatni, IErmsAutorizace { }
 partial class PodpisZruseni : IUdalostOstatni, IErmsAutorizace { }
 partial class PredatDoPodpisoveKnihy : IUdalostOstatni, IErmsAutorizace { }
 partial class PredatDoPodpisoveKnihyExterni : IUdalostOstatni, IErmsAutorizace { }
+partial class PodpisSchvaleniOdmitnuto : IUdalostOstatni, IErmsAutorizace { }
+partial class PodpisSchvaleniSchvaleno : IUdalostOstatni, IErmsAutorizace { }
 partial class UdelitZpristupneni : IUdalostOstatni, IErmsAutorizace { }

@@ -64,6 +64,27 @@ public static class MitDavkaBuilderExtensions
 
         return builder.AddOstatni(udalost, poradi);
     }
+    public static DavkaBuilder PodpisSchvaleniOdmitnuto(this DavkaBuilder builder, string idKomponenty, string? oduvodneni = null, int poradi = 1)
+    {
+        var udalost = new PodpisSchvaleniOdmitnuto
+        {
+            KomponentaId = idKomponenty,
+            Oduvodneni = oduvodneni
+        };
+
+        return builder.AddOstatni(udalost, poradi);
+    }
+
+    public static DavkaBuilder PodpisSchvaleniSchvaleno(this DavkaBuilder builder, string idKomponenty, int poradi = 1)
+    {
+        var udalost = new PodpisSchvaleniSchvaleno
+        {
+            KomponentaId = idKomponenty
+        };
+
+        return builder.AddOstatni(udalost, poradi);
+    }
+
 
     public static DavkaBuilder PodpisZruseni(this DavkaBuilder builder, string idKomponenty, string? oduvodneni = null, int poradi = 1)
     {

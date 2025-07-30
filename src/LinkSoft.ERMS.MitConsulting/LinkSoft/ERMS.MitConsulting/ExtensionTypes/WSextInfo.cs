@@ -13,2265 +13,3551 @@
 // 
 namespace LinkSoft.ERMS.MITConsulting {
     using System.Xml.Serialization;
-    
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public enum AnalogovyDokument {
-        
-        /// <remarks/>
-        ano,
-        
-        /// <remarks/>
-        ne,
-    }
-    
+
+
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class DopisOnlineWS {
-        
-        private DopisOnlineWSTyp_tisku typ_tiskuField;
-        
-        private DopisOnlineWSPoukazka poukazkaField;
-        
-        private DopisOnlineWSObalka_c4 obalka_c4Field;
-        
-        private bool obalka_c4FieldSpecified;
-        
-        /// <remarks/>
-        public DopisOnlineWSTyp_tisku typ_tisku {
-            get {
-                return this.typ_tiskuField;
-            }
-            set {
-                this.typ_tiskuField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public DopisOnlineWSPoukazka poukazka {
-            get {
-                return this.poukazkaField;
-            }
-            set {
-                this.poukazkaField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public DopisOnlineWSObalka_c4 obalka_c4 {
-            get {
-                return this.obalka_c4Field;
-            }
-            set {
-                this.obalka_c4Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool obalka_c4Specified {
-            get {
-                return this.obalka_c4FieldSpecified;
-            }
-            set {
-                this.obalka_c4FieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public enum DopisOnlineWSTyp_tisku {
-        
-        /// <remarks/>
-        jednostranny,
-        
-        /// <remarks/>
-        oboustranny,
-        
-        /// <remarks/>
-        nedefinovany,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class DopisOnlineWSPoukazka {
-        
-        private string castkaField;
-        
-        private string predcisli_uctuField;
-        
-        private string ucetField;
-        
-        private string kod_bankyField;
-        
-        private string variabilni_symbolField;
-        
-        private string specificky_symbolField;
-        
-        private string konstantni_symbolField;
-        
-        private string zprava_pro_prijemce1Field;
-        
-        private string zprava_pro_prijemce2Field;
-        
-        private string ucel_platbyField;
-        
-        private DopisOnlineWSPoukazkaAdresa_majitele_uctu adresa_majitele_uctuField;
-        
-        private DopisOnlineWSPoukazkaOdesilatel odesilatelField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string castka {
-            get {
-                return this.castkaField;
-            }
-            set {
-                this.castkaField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string predcisli_uctu {
-            get {
-                return this.predcisli_uctuField;
-            }
-            set {
-                this.predcisli_uctuField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string ucet {
-            get {
-                return this.ucetField;
-            }
-            set {
-                this.ucetField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string kod_banky {
-            get {
-                return this.kod_bankyField;
-            }
-            set {
-                this.kod_bankyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string variabilni_symbol {
-            get {
-                return this.variabilni_symbolField;
-            }
-            set {
-                this.variabilni_symbolField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string specificky_symbol {
-            get {
-                return this.specificky_symbolField;
-            }
-            set {
-                this.specificky_symbolField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string konstantni_symbol {
-            get {
-                return this.konstantni_symbolField;
-            }
-            set {
-                this.konstantni_symbolField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string zprava_pro_prijemce1 {
-            get {
-                return this.zprava_pro_prijemce1Field;
-            }
-            set {
-                this.zprava_pro_prijemce1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string zprava_pro_prijemce2 {
-            get {
-                return this.zprava_pro_prijemce2Field;
-            }
-            set {
-                this.zprava_pro_prijemce2Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string ucel_platby {
-            get {
-                return this.ucel_platbyField;
-            }
-            set {
-                this.ucel_platbyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public DopisOnlineWSPoukazkaAdresa_majitele_uctu adresa_majitele_uctu {
-            get {
-                return this.adresa_majitele_uctuField;
-            }
-            set {
-                this.adresa_majitele_uctuField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public DopisOnlineWSPoukazkaOdesilatel odesilatel {
-            get {
-                return this.odesilatelField;
-            }
-            set {
-                this.odesilatelField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class DopisOnlineWSPoukazkaAdresa_majitele_uctu {
-        
-        private string adr1Field;
-        
-        private string adr2Field;
-        
-        private string adr3Field;
-        
-        private string adr4Field;
-        
-        /// <remarks/>
-        public string adr1 {
-            get {
-                return this.adr1Field;
-            }
-            set {
-                this.adr1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string adr2 {
-            get {
-                return this.adr2Field;
-            }
-            set {
-                this.adr2Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string adr3 {
-            get {
-                return this.adr3Field;
-            }
-            set {
-                this.adr3Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string adr4 {
-            get {
-                return this.adr4Field;
-            }
-            set {
-                this.adr4Field = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class Zpristupneni {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class Zpristupneni
+    {
+
         private string identifikatorEntitaField;
-        
+
         private ZpristupneniTypObjektu typObjektuField;
-        
+
         private System.DateTime platnostOdField;
-        
+
         private System.DateTime platnostDoField;
-        
+
         private bool platnostDoFieldSpecified;
-        
+
         private ZpristupneniOpravneni opravneniField;
-        
+
         private string identifikatorSubjektField;
-        
+
         private ZpristupneniZpristupneniPro zpristupneniProField;
-        
+
         /// <remarks/>
-        public string IdentifikatorEntita {
-            get {
+        public string IdentifikatorEntita
+        {
+            get
+            {
                 return this.identifikatorEntitaField;
             }
-            set {
+            set
+            {
                 this.identifikatorEntitaField = value;
             }
         }
-        
+
         /// <remarks/>
-        public ZpristupneniTypObjektu TypObjektu {
-            get {
+        public ZpristupneniTypObjektu TypObjektu
+        {
+            get
+            {
                 return this.typObjektuField;
             }
-            set {
+            set
+            {
                 this.typObjektuField = value;
             }
         }
-        
+
         /// <remarks/>
-        public System.DateTime PlatnostOd {
-            get {
+        public System.DateTime PlatnostOd
+        {
+            get
+            {
                 return this.platnostOdField;
             }
-            set {
+            set
+            {
                 this.platnostOdField = value;
             }
         }
-        
+
         /// <remarks/>
-        public System.DateTime PlatnostDo {
-            get {
+        public System.DateTime PlatnostDo
+        {
+            get
+            {
                 return this.platnostDoField;
             }
-            set {
+            set
+            {
                 this.platnostDoField = value;
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool PlatnostDoSpecified {
-            get {
+        public bool PlatnostDoSpecified
+        {
+            get
+            {
                 return this.platnostDoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.platnostDoFieldSpecified = value;
             }
         }
-        
+
         /// <remarks/>
-        public ZpristupneniOpravneni Opravneni {
-            get {
+        public ZpristupneniOpravneni Opravneni
+        {
+            get
+            {
                 return this.opravneniField;
             }
-            set {
+            set
+            {
                 this.opravneniField = value;
             }
         }
-        
+
         /// <remarks/>
-        public string IdentifikatorSubjekt {
-            get {
+        public string IdentifikatorSubjekt
+        {
+            get
+            {
                 return this.identifikatorSubjektField;
             }
-            set {
+            set
+            {
                 this.identifikatorSubjektField = value;
             }
         }
-        
+
         /// <remarks/>
-        public ZpristupneniZpristupneniPro ZpristupneniPro {
-            get {
+        public ZpristupneniZpristupneniPro ZpristupneniPro
+        {
+            get
+            {
                 return this.zpristupneniProField;
             }
-            set {
+            set
+            {
                 this.zpristupneniProField = value;
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public enum ZpristupneniTypObjektu {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public enum ZpristupneniTypObjektu
+    {
+
         /// <remarks/>
         Komponenta,
-        
+
         /// <remarks/>
         Dokument,
-        
+
         /// <remarks/>
         Spis,
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public enum ZpristupneniOpravneni {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public enum ZpristupneniOpravneni
+    {
+
         /// <remarks/>
         Cteni,
-        
+
         /// <remarks/>
         Zatrideni,
-        
+
         /// <remarks/>
         ZatrideniAnalog,
-        
+
         /// <remarks/>
         ZatrideniDigital,
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public enum ZpristupneniZpristupneniPro {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public enum ZpristupneniZpristupneniPro
+    {
+
         /// <remarks/>
         System,
-        
+
         /// <remarks/>
         Uzel,
-        
+
         /// <remarks/>
         Zpracovatel,
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class tKomponentaDoplnujiciData {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class tKomponentaDoplnujiciData
+    {
+
         private string identifikatorField;
-        
+
         private tKomponentaDoplnujiciDataTypKomponentyNsesss typKomponentyNsesssField;
-        
+
         private tKomponentaDoplnujiciDataTypKomponentySystemovy typKomponentySystemovyField;
-        
+
         private tKomponentaDoplnujiciDataTypKomponentyUzivatelsky typKomponentyUzivatelskyField;
-        
+
         private tKomponentaDoplnujiciData[] potomekField;
-        
+
         /// <remarks/>
-        public string Identifikator {
-            get {
+        public string Identifikator
+        {
+            get
+            {
                 return this.identifikatorField;
             }
-            set {
+            set
+            {
                 this.identifikatorField = value;
             }
         }
-        
+
         /// <remarks/>
-        public tKomponentaDoplnujiciDataTypKomponentyNsesss TypKomponentyNsesss {
-            get {
+        public tKomponentaDoplnujiciDataTypKomponentyNsesss TypKomponentyNsesss
+        {
+            get
+            {
                 return this.typKomponentyNsesssField;
             }
-            set {
+            set
+            {
                 this.typKomponentyNsesssField = value;
             }
         }
-        
+
         /// <remarks/>
-        public tKomponentaDoplnujiciDataTypKomponentySystemovy TypKomponentySystemovy {
-            get {
+        public tKomponentaDoplnujiciDataTypKomponentySystemovy TypKomponentySystemovy
+        {
+            get
+            {
                 return this.typKomponentySystemovyField;
             }
-            set {
+            set
+            {
                 this.typKomponentySystemovyField = value;
             }
         }
-        
+
         /// <remarks/>
-        public tKomponentaDoplnujiciDataTypKomponentyUzivatelsky TypKomponentyUzivatelsky {
-            get {
+        public tKomponentaDoplnujiciDataTypKomponentyUzivatelsky TypKomponentyUzivatelsky
+        {
+            get
+            {
                 return this.typKomponentyUzivatelskyField;
             }
-            set {
+            set
+            {
                 this.typKomponentyUzivatelskyField = value;
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Potomek")]
-        public tKomponentaDoplnujiciData[] Potomek {
-            get {
+        public tKomponentaDoplnujiciData[] Potomek
+        {
+            get
+            {
                 return this.potomekField;
             }
-            set {
+            set
+            {
                 this.potomekField = value;
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public enum tKomponentaDoplnujiciDataTypKomponentyNsesss {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public enum tKomponentaDoplnujiciDataTypKomponentyNsesss
+    {
+
         /// <remarks/>
         main,
-        
+
         /// <remarks/>
         enclosure,
-        
+
         /// <remarks/>
         signature,
-        
+
         /// <remarks/>
         meta,
-        
+
         /// <remarks/>
         dorucenka,
-        
+
         /// <remarks/>
         protokol_overeni_podpisu,
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class tKomponentaDoplnujiciDataTypKomponentySystemovy {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class tKomponentaDoplnujiciDataTypKomponentySystemovy
+    {
+
         private string kodField;
-        
+
         private string nazevField;
-        
+
         /// <remarks/>
-        public string Kod {
-            get {
+        public string Kod
+        {
+            get
+            {
                 return this.kodField;
             }
-            set {
+            set
+            {
                 this.kodField = value;
             }
         }
-        
+
         /// <remarks/>
-        public string Nazev {
-            get {
+        public string Nazev
+        {
+            get
+            {
                 return this.nazevField;
             }
-            set {
+            set
+            {
                 this.nazevField = value;
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class tKomponentaDoplnujiciDataTypKomponentyUzivatelsky {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class tKomponentaDoplnujiciDataTypKomponentyUzivatelsky
+    {
+
         private string kodField;
-        
+
         private string nazevField;
-        
+
         /// <remarks/>
-        public string Kod {
-            get {
+        public string Kod
+        {
+            get
+            {
                 return this.kodField;
             }
-            set {
+            set
+            {
                 this.kodField = value;
             }
         }
-        
+
         /// <remarks/>
-        public string Nazev {
-            get {
+        public string Nazev
+        {
+            get
+            {
                 return this.nazevField;
             }
-            set {
+            set
+            {
                 this.nazevField = value;
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class DopisOnlineWSPoukazkaOdesilatel {
-        
-        private string adr1Field;
-        
-        private string adr2Field;
-        
-        private string adr3Field;
-        
-        private string adr4Field;
-        
-        /// <remarks/>
-        public string adr1 {
-            get {
-                return this.adr1Field;
-            }
-            set {
-                this.adr1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string adr2 {
-            get {
-                return this.adr2Field;
-            }
-            set {
-                this.adr2Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string adr3 {
-            get {
-                return this.adr3Field;
-            }
-            set {
-                this.adr3Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string adr4 {
-            get {
-                return this.adr4Field;
-            }
-            set {
-                this.adr4Field = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public enum DopisOnlineWSObalka_c4 {
-        
-        /// <remarks/>
-        ne,
-        
-        /// <remarks/>
-        ano,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class KomponentyDoplnujiciData {
-        
-        private tKomponentaDoplnujiciData[] komponentaDoplnujiciDataField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("KomponentaDoplnujiciData")]
-        public tKomponentaDoplnujiciData[] KomponentaDoplnujiciData {
-            get {
-                return this.komponentaDoplnujiciDataField;
-            }
-            set {
-                this.komponentaDoplnujiciDataField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class KonicaMinoltaWS {
-        
-        private string envelopeMediaField;
-        
-        private string documentMediaField;
-        
-        private string registeredMailField;
-        
-        /// <remarks/>
-        public string EnvelopeMedia {
-            get {
-                return this.envelopeMediaField;
-            }
-            set {
-                this.envelopeMediaField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string DocumentMedia {
-            get {
-                return this.documentMediaField;
-            }
-            set {
-                this.documentMediaField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string RegisteredMail {
-            get {
-                return this.registeredMailField;
-            }
-            set {
-                this.registeredMailField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class MAttr {
-        
-        private MAttrItem[] itemField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("item")]
-        public MAttrItem[] item {
-            get {
-                return this.itemField;
-            }
-            set {
-                this.itemField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class MAttrItem {
-        
-        private object itemField;
-        
-        private int idField;
-        
-        private bool idFieldSpecified;
-        
-        private MAttrItemType typeField;
-        
-        private bool typeFieldSpecified;
-        
-        private string nameField;
-        
-        private bool requiredField;
-        
-        private bool requiredFieldSpecified;
-        
-        private string parametersField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("definition", typeof(MAttrItemDefinition))]
-        [System.Xml.Serialization.XmlElementAttribute("value", typeof(MAttrItemValue))]
-        public object Item {
-            get {
-                return this.itemField;
-            }
-            set {
-                this.itemField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idSpecified {
-            get {
-                return this.idFieldSpecified;
-            }
-            set {
-                this.idFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public MAttrItemType type {
-            get {
-                return this.typeField;
-            }
-            set {
-                this.typeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool typeSpecified {
-            get {
-                return this.typeFieldSpecified;
-            }
-            set {
-                this.typeFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public bool required {
-            get {
-                return this.requiredField;
-            }
-            set {
-                this.requiredField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool requiredSpecified {
-            get {
-                return this.requiredFieldSpecified;
-            }
-            set {
-                this.requiredFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string parameters {
-            get {
-                return this.parametersField;
-            }
-            set {
-                this.parametersField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class MAttrItemDefinition {
-        
-        private object itemField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("combo_definition", typeof(MAttrItemDefinitionCombo_definition))]
-        [System.Xml.Serialization.XmlElementAttribute("currency_definition", typeof(MAttrItemDefinitionCurrency_definition))]
-        public object Item {
-            get {
-                return this.itemField;
-            }
-            set {
-                this.itemField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class MAttrItemDefinitionCombo_definition {
-        
-        private MAttrItemDefinitionCombo_definitionCombo_item[] combo_itemField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("combo_item")]
-        public MAttrItemDefinitionCombo_definitionCombo_item[] combo_item {
-            get {
-                return this.combo_itemField;
-            }
-            set {
-                this.combo_itemField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class MAttrItemDefinitionCombo_definitionCombo_item {
-        
-        private string codeField;
-        
-        private string disp_valueField;
-        
-        private bool enableField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string code {
-            get {
-                return this.codeField;
-            }
-            set {
-                this.codeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string disp_value {
-            get {
-                return this.disp_valueField;
-            }
-            set {
-                this.disp_valueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public bool enable {
-            get {
-                return this.enableField;
-            }
-            set {
-                this.enableField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class MAttrItemDefinitionCurrency_definition {
-        
-        private string[] currencyField;
-        
-        private int currency_precisionField;
-        
-        private bool currency_precisionFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("currency")]
-        public string[] currency {
-            get {
-                return this.currencyField;
-            }
-            set {
-                this.currencyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public int currency_precision {
-            get {
-                return this.currency_precisionField;
-            }
-            set {
-                this.currency_precisionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool currency_precisionSpecified {
-            get {
-                return this.currency_precisionFieldSpecified;
-            }
-            set {
-                this.currency_precisionFieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class MAttrItemValue {
-        
-        private object itemField;
-        
-        private ItemChoiceType itemElementNameField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("account_value", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("combo_value", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("currency_value", typeof(MAttrItemValueCurrency_value))]
-        [System.Xml.Serialization.XmlElementAttribute("date_value", typeof(System.DateTime))]
-        [System.Xml.Serialization.XmlElementAttribute("double_value", typeof(double))]
-        [System.Xml.Serialization.XmlElementAttribute("int_value", typeof(int))]
-        [System.Xml.Serialization.XmlElementAttribute("string_value", typeof(string))]
-        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
-        public object Item {
-            get {
-                return this.itemField;
-            }
-            set {
-                this.itemField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public ItemChoiceType ItemElementName {
-            get {
-                return this.itemElementNameField;
-            }
-            set {
-                this.itemElementNameField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class MAttrItemValueCurrency_value {
-        
-        private double currency_valueField;
-        
-        private bool currency_valueFieldSpecified;
-        
-        private string currencyField;
-        
-        /// <remarks/>
-        public double currency_value {
-            get {
-                return this.currency_valueField;
-            }
-            set {
-                this.currency_valueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool currency_valueSpecified {
-            get {
-                return this.currency_valueFieldSpecified;
-            }
-            set {
-                this.currency_valueFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string currency {
-            get {
-                return this.currencyField;
-            }
-            set {
-                this.currencyField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://mit-consulting.cz/erms-ext", IncludeInSchema=false)]
-    public enum ItemChoiceType {
-        
-        /// <remarks/>
-        account_value,
-        
-        /// <remarks/>
-        combo_value,
-        
-        /// <remarks/>
-        currency_value,
-        
-        /// <remarks/>
-        date_value,
-        
-        /// <remarks/>
-        double_value,
-        
-        /// <remarks/>
-        int_value,
-        
-        /// <remarks/>
-        string_value,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public enum MAttrItemType {
-        
-        /// <remarks/>
-        retezec,
-        
-        /// <remarks/>
-        combo,
-        
-        /// <remarks/>
-        castka,
-        
-        /// <remarks/>
-        cele_cislo,
-        
-        /// <remarks/>
-        desetinne_cislo,
-        
-        /// <remarks/>
-        dlouhy_text,
-        
-        /// <remarks/>
-        datum,
-        
-        /// <remarks/>
-        cislo_uctu,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class ProvedenaKonverze {
-        
-        private string identifikatorDokumentAnalogovyField;
-        
-        private string identifikatorDokumentDigitalniField;
-        
-        /// <remarks/>
-        public string IdentifikatorDokumentAnalogovy {
-            get {
-                return this.identifikatorDokumentAnalogovyField;
-            }
-            set {
-                this.identifikatorDokumentAnalogovyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string IdentifikatorDokumentDigitalni {
-            get {
-                return this.identifikatorDokumentDigitalniField;
-            }
-            set {
-                this.identifikatorDokumentDigitalniField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class TypyKomponent {
-        
-        private TypyKomponentTypKomponentyUzivatelsky[] typKomponentyUzivatelskyField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("TypKomponentyUzivatelsky")]
-        public TypyKomponentTypKomponentyUzivatelsky[] TypKomponentyUzivatelsky {
-            get {
-                return this.typKomponentyUzivatelskyField;
-            }
-            set {
-                this.typKomponentyUzivatelskyField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class TypyKomponentTypKomponentyUzivatelsky {
-        
-        private string kodField;
-        
-        private string nazevField;
-        
-        private TypyKomponentTypKomponentyUzivatelskyUnikatnost unikatnostField;
-        
-        /// <remarks/>
-        public string Kod {
-            get {
-                return this.kodField;
-            }
-            set {
-                this.kodField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Nazev {
-            get {
-                return this.nazevField;
-            }
-            set {
-                this.nazevField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public TypyKomponentTypKomponentyUzivatelskyUnikatnost Unikatnost {
-            get {
-                return this.unikatnostField;
-            }
-            set {
-                this.unikatnostField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public enum TypyKomponentTypKomponentyUzivatelskyUnikatnost {
-        
-        /// <remarks/>
-        ano,
-        
-        /// <remarks/>
-        ne,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class UdelenaZpristupneni {
-        
-        private Zpristupneni[] zpristupneniField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Zpristupneni")]
-        public Zpristupneni[] Zpristupneni {
-            get {
-                return this.zpristupneniField;
-            }
-            set {
-                this.zpristupneniField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class VlastnikCertifikatu {
-        
-        private string vlastnikJmenoField;
-        
-        private string vlastnikPoziceNazevField;
-        
-        private string vlastnikIdField;
-        
-        private VlastnikCertifikatuCertifikat[] certifikatField;
-        
-        /// <remarks/>
-        public string VlastnikJmeno {
-            get {
-                return this.vlastnikJmenoField;
-            }
-            set {
-                this.vlastnikJmenoField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string VlastnikPoziceNazev {
-            get {
-                return this.vlastnikPoziceNazevField;
-            }
-            set {
-                this.vlastnikPoziceNazevField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string VlastnikId {
-            get {
-                return this.vlastnikIdField;
-            }
-            set {
-                this.vlastnikIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Certifikat")]
-        public VlastnikCertifikatuCertifikat[] Certifikat {
-            get {
-                return this.certifikatField;
-            }
-            set {
-                this.certifikatField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class VlastnikCertifikatuCertifikat {
-        
-        private string serioveCisloField;
-        
-        private string nazevField;
-        
-        private string poskytovatelField;
-        
-        private string typCeritfikatuNazevField;
-        
-        private string typCeritfikatuKodField;
-        
-        private System.DateTime platnostOdField;
-        
-        private System.DateTime platnostDoField;
-        
-        /// <remarks/>
-        public string SerioveCislo {
-            get {
-                return this.serioveCisloField;
-            }
-            set {
-                this.serioveCisloField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Nazev {
-            get {
-                return this.nazevField;
-            }
-            set {
-                this.nazevField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Poskytovatel {
-            get {
-                return this.poskytovatelField;
-            }
-            set {
-                this.poskytovatelField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string TypCeritfikatuNazev {
-            get {
-                return this.typCeritfikatuNazevField;
-            }
-            set {
-                this.typCeritfikatuNazevField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string TypCeritfikatuKod {
-            get {
-                return this.typCeritfikatuKodField;
-            }
-            set {
-                this.typCeritfikatuKodField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public System.DateTime PlatnostOd {
-            get {
-                return this.platnostOdField;
-            }
-            set {
-                this.platnostOdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public System.DateTime PlatnostDo {
-            get {
-                return this.platnostDoField;
-            }
-            set {
-                this.platnostDoField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class KomponentaNovaVerze {
-        
-        private string komponentaIdPuvodniField;
-        
-        private tKomponentaDoplnujiciData komponentaNovaVerzeInfoField;
-        
-        /// <remarks/>
-        public string KomponentaIdPuvodni {
-            get {
-                return this.komponentaIdPuvodniField;
-            }
-            set {
-                this.komponentaIdPuvodniField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public tKomponentaDoplnujiciData KomponentaNovaVerzeInfo {
-            get {
-                return this.komponentaNovaVerzeInfoField;
-            }
-            set {
-                this.komponentaNovaVerzeInfoField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class OdebraniZpristupneni {
-        
-        private Zpristupneni zpristupneniField;
-        
-        private tAutorizace autorizaceField;
-        
-        /// <remarks/>
-        public Zpristupneni Zpristupneni {
-            get {
-                return this.zpristupneniField;
-            }
-            set {
-                this.zpristupneniField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public tAutorizace Autorizace {
-            get {
-                return this.autorizaceField;
-            }
-            set {
-                this.autorizaceField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class PodpisovaKnihaOdmitnuto {
-        
-        private string komponentaIdField;
-        
-        private string oduvodneniField;
-        
-        /// <remarks/>
-        public string KomponentaId {
-            get {
-                return this.komponentaIdField;
-            }
-            set {
-                this.komponentaIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Oduvodneni {
-            get {
-                return this.oduvodneniField;
-            }
-            set {
-                this.oduvodneniField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class PodpisovaKnihaPodepsano {
-        
-        private string komponentaIdPuvodniField;
-        
-        private string komponentaIdPodepsanaField;
-        
-        /// <remarks/>
-        public string KomponentaIdPuvodni {
-            get {
-                return this.komponentaIdPuvodniField;
-            }
-            set {
-                this.komponentaIdPuvodniField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string KomponentaIdPodepsana {
-            get {
-                return this.komponentaIdPodepsanaField;
-            }
-            set {
-                this.komponentaIdPodepsanaField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class UdeleniZpristupneni {
-        
-        private Zpristupneni zpristupneniField;
-        
-        private tAutorizace autorizaceField;
-        
-        /// <remarks/>
-        public Zpristupneni Zpristupneni {
-            get {
-                return this.zpristupneniField;
-            }
-            set {
-                this.zpristupneniField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public tAutorizace Autorizace {
-            get {
-                return this.autorizaceField;
-            }
-            set {
-                this.autorizaceField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class ExterniCiselnikNaplneni {
-        
-        private ExterniCiselnikNaplneniExterniCiselnik externiCiselnikField;
-        
-        /// <remarks/>
-        public ExterniCiselnikNaplneniExterniCiselnik ExterniCiselnik {
-            get {
-                return this.externiCiselnikField;
-            }
-            set {
-                this.externiCiselnikField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class ExterniCiselnikNaplneniExterniCiselnik {
-        
-        private ExterniCiselnikNaplneniExterniCiselnikCiselnikPolozka[] ciselnikPolozkaField;
-        
-        private string ciselnikIdentifikatorField;
-        
-        private string ciselnikHesloField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CiselnikPolozka")]
-        public ExterniCiselnikNaplneniExterniCiselnikCiselnikPolozka[] CiselnikPolozka {
-            get {
-                return this.ciselnikPolozkaField;
-            }
-            set {
-                this.ciselnikPolozkaField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string CiselnikIdentifikator {
-            get {
-                return this.ciselnikIdentifikatorField;
-            }
-            set {
-                this.ciselnikIdentifikatorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string CiselnikHeslo {
-            get {
-                return this.ciselnikHesloField;
-            }
-            set {
-                this.ciselnikHesloField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class ExterniCiselnikNaplneniExterniCiselnikCiselnikPolozka {
-        
-        private string klicField;
-        
-        private string hodnotaField;
-        
-        /// <remarks/>
-        public string Klic {
-            get {
-                return this.klicField;
-            }
-            set {
-                this.klicField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Hodnota {
-            get {
-                return this.hodnotaField;
-            }
-            set {
-                this.hodnotaField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class KonverzeDokumentu {
-        
-        private tFile[] zalozeniSouboruField;
-        
-        private string identifikatorDokumentAnalogovyField;
-        
-        private tFileLink[] odkazyNaSouboryField;
-        
-        private KonverzeDokumentuPotvrzeniShody potvrzeniShodyField;
-        
-        private KonverzeDokumentuOkamziteZniceniAnalogoveCasti okamziteZniceniAnalogoveCastiField;
-        
-        private KonverzeDokumentuTypKonverze typKonverzeField;
-        
-        private tAutorizace autorizaceField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ZalozeniSouboru")]
-        public tFile[] ZalozeniSouboru {
-            get {
-                return this.zalozeniSouboruField;
-            }
-            set {
-                this.zalozeniSouboruField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string IdentifikatorDokumentAnalogovy {
-            get {
-                return this.identifikatorDokumentAnalogovyField;
-            }
-            set {
-                this.identifikatorDokumentAnalogovyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public tFileLink[] OdkazyNaSoubory {
-            get {
-                return this.odkazyNaSouboryField;
-            }
-            set {
-                this.odkazyNaSouboryField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public KonverzeDokumentuPotvrzeniShody PotvrzeniShody {
-            get {
-                return this.potvrzeniShodyField;
-            }
-            set {
-                this.potvrzeniShodyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public KonverzeDokumentuOkamziteZniceniAnalogoveCasti OkamziteZniceniAnalogoveCasti {
-            get {
-                return this.okamziteZniceniAnalogoveCastiField;
-            }
-            set {
-                this.okamziteZniceniAnalogoveCastiField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public KonverzeDokumentuTypKonverze TypKonverze {
-            get {
-                return this.typKonverzeField;
-            }
-            set {
-                this.typKonverzeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public tAutorizace Autorizace {
-            get {
-                return this.autorizaceField;
-            }
-            set {
-                this.autorizaceField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public enum KonverzeDokumentuPotvrzeniShody {
-        
-        /// <remarks/>
-        ano,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public enum KonverzeDokumentuOkamziteZniceniAnalogoveCasti {
-        
-        /// <remarks/>
-        ano,
-        
-        /// <remarks/>
-        ne,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    public enum KonverzeDokumentuTypKonverze {
-        
-        /// <remarks/>
-        NeautorizovanaAnalogDigital,
-        
-        /// <remarks/>
-        NeautorizovanaDigitalAnalog,
-        
-        /// <remarks/>
-        AutorizovanaAnalogDigital,
-        
-        /// <remarks/>
-        AutorizovanaDigitalAnalog,
-        
-        /// <remarks/>
-        ZMociUredniAnalogDigital,
-        
-        /// <remarks/>
-        ZMociUredniDigitalAnalog,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class OdebratZPodpisoveKnihy {
-        
-        private string komponentaIdField;
-        
-        private string oduvodneniField;
-        
-        private tAutorizace autorizaceField;
-        
-        /// <remarks/>
-        public string KomponentaId {
-            get {
-                return this.komponentaIdField;
-            }
-            set {
-                this.komponentaIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Oduvodneni {
-            get {
-                return this.oduvodneniField;
-            }
-            set {
-                this.oduvodneniField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public tAutorizace Autorizace {
-            get {
-                return this.autorizaceField;
-            }
-            set {
-                this.autorizaceField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class OdebratZpristupneni {
-        
-        private Zpristupneni[] zpristupneniField;
-        
-        private tAutorizace autorizaceField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Zpristupneni")]
-        public Zpristupneni[] Zpristupneni {
-            get {
-                return this.zpristupneniField;
-            }
-            set {
-                this.zpristupneniField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public tAutorizace Autorizace {
-            get {
-                return this.autorizaceField;
-            }
-            set {
-                this.autorizaceField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class PodpisZruseni {
-        
-        private string komponentaIdField;
-        
-        private string oduvodneniField;
-        
-        private tAutorizace autorizaceField;
-        
-        /// <remarks/>
-        public string KomponentaId {
-            get {
-                return this.komponentaIdField;
-            }
-            set {
-                this.komponentaIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Oduvodneni {
-            get {
-                return this.oduvodneniField;
-            }
-            set {
-                this.oduvodneniField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public tAutorizace Autorizace {
-            get {
-                return this.autorizaceField;
-            }
-            set {
-                this.autorizaceField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class PredatDoPodpisoveKnihy {
-        
-        private string komponentaIdField;
-        
-        private string poznamkaField;
-        
-        private string podepisujiciIdField;
-        
-        private VizualizacePodpisu vizualizacePodpisuField;
-        
-        private tAutorizace autorizaceField;
-        
-        /// <remarks/>
-        public string KomponentaId {
-            get {
-                return this.komponentaIdField;
-            }
-            set {
-                this.komponentaIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Poznamka {
-            get {
-                return this.poznamkaField;
-            }
-            set {
-                this.poznamkaField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string PodepisujiciId {
-            get {
-                return this.podepisujiciIdField;
-            }
-            set {
-                this.podepisujiciIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public VizualizacePodpisu VizualizacePodpisu {
-            get {
-                return this.vizualizacePodpisuField;
-            }
-            set {
-                this.vizualizacePodpisuField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public tAutorizace Autorizace {
-            get {
-                return this.autorizaceField;
-            }
-            set {
-                this.autorizaceField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://mit-consulting.cz/erms-ext")]
-    public partial class VizualizacePodpisu {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class VizualizacePodpisu
+    {
+
         private int poziceXField;
-        
+
         private int poziceYField;
-        
+
         private int cisloStranyField;
-        
+
         /// <remarks/>
-        public int PoziceX {
-            get {
+        public int PoziceX
+        {
+            get
+            {
                 return this.poziceXField;
             }
-            set {
+            set
+            {
                 this.poziceXField = value;
             }
         }
-        
+
         /// <remarks/>
-        public int PoziceY {
-            get {
+        public int PoziceY
+        {
+            get
+            {
                 return this.poziceYField;
             }
-            set {
+            set
+            {
                 this.poziceYField = value;
             }
         }
-        
+
         /// <remarks/>
-        public int CisloStrany {
-            get {
+        public int CisloStrany
+        {
+            get
+            {
                 return this.cisloStranyField;
             }
-            set {
+            set
+            {
                 this.cisloStranyField = value;
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class PredatDoPodpisoveKnihyExterni {
-        
-        private string komponentaIdField;
-        
-        private string poznamkaField;
-        
-        private string podepisujiciMailField;
-        
-        private string podepisujiciTelefonField;
-        
-        private VizualizacePodpisu vizualizacePodpisuField;
-        
-        private tAutorizace autorizaceField;
-        
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class DopisOnlineWSPoukazkaOdesilatel
+    {
+
+        private string adr1Field;
+
+        private string adr2Field;
+
+        private string adr3Field;
+
+        private string adr4Field;
+
         /// <remarks/>
-        public string KomponentaId {
-            get {
-                return this.komponentaIdField;
+        public string adr1
+        {
+            get
+            {
+                return this.adr1Field;
             }
-            set {
-                this.komponentaIdField = value;
+            set
+            {
+                this.adr1Field = value;
             }
         }
-        
+
         /// <remarks/>
-        public string Poznamka {
-            get {
+        public string adr2
+        {
+            get
+            {
+                return this.adr2Field;
+            }
+            set
+            {
+                this.adr2Field = value;
+            }
+        }
+
+        /// <remarks/>
+        public string adr3
+        {
+            get
+            {
+                return this.adr3Field;
+            }
+            set
+            {
+                this.adr3Field = value;
+            }
+        }
+
+        /// <remarks/>
+        public string adr4
+        {
+            get
+            {
+                return this.adr4Field;
+            }
+            set
+            {
+                this.adr4Field = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public enum DopisOnlineWSObalkaC4
+    {
+
+        /// <remarks/>
+        ne,
+
+        /// <remarks/>
+        ano,
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class ExterniPodpis
+    {
+
+        private string identifikatorKomponentaField;
+
+        private string emailField;
+
+        private string telefonField;
+
+        private string poznamkaField;
+
+        private VizualizacePodpisu vizualizacePodpisuField;
+
+        /// <remarks/>
+        public string IdentifikatorKomponenta
+        {
+            get
+            {
+                return this.identifikatorKomponentaField;
+            }
+            set
+            {
+                this.identifikatorKomponentaField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Email
+        {
+            get
+            {
+                return this.emailField;
+            }
+            set
+            {
+                this.emailField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Telefon
+        {
+            get
+            {
+                return this.telefonField;
+            }
+            set
+            {
+                this.telefonField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Poznamka
+        {
+            get
+            {
                 return this.poznamkaField;
             }
-            set {
+            set
+            {
                 this.poznamkaField = value;
             }
         }
-        
+
         /// <remarks/>
-        public string PodepisujiciMail {
-            get {
-                return this.podepisujiciMailField;
-            }
-            set {
-                this.podepisujiciMailField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string PodepisujiciTelefon {
-            get {
-                return this.podepisujiciTelefonField;
-            }
-            set {
-                this.podepisujiciTelefonField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public VizualizacePodpisu VizualizacePodpisu {
-            get {
+        public VizualizacePodpisu VizualizacePodpisu
+        {
+            get
+            {
                 return this.vizualizacePodpisuField;
             }
-            set {
+            set
+            {
                 this.vizualizacePodpisuField = value;
             }
         }
-        
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class KomponentyDoplnujiciData
+    {
+
+        private tKomponentaDoplnujiciData[] komponentaDoplnujiciDataField;
+
         /// <remarks/>
-        public tAutorizace Autorizace {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("KomponentaDoplnujiciData")]
+        public tKomponentaDoplnujiciData[] KomponentaDoplnujiciData
+        {
+            get
+            {
+                return this.komponentaDoplnujiciDataField;
+            }
+            set
+            {
+                this.komponentaDoplnujiciDataField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class KonicaMinoltaWS
+    {
+
+        private string envelopeMediaField;
+
+        private string documentMediaField;
+
+        private string registeredMailField;
+
+        /// <remarks/>
+        public string EnvelopeMedia
+        {
+            get
+            {
+                return this.envelopeMediaField;
+            }
+            set
+            {
+                this.envelopeMediaField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string DocumentMedia
+        {
+            get
+            {
+                return this.documentMediaField;
+            }
+            set
+            {
+                this.documentMediaField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string RegisteredMail
+        {
+            get
+            {
+                return this.registeredMailField;
+            }
+            set
+            {
+                this.registeredMailField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class MetaData
+    {
+
+        private MetaDataPolozka[] polozkaField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Polozka")]
+        public MetaDataPolozka[] Polozka
+        {
+            get
+            {
+                return this.polozkaField;
+            }
+            set
+            {
+                this.polozkaField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class MetaDataPolozka
+    {
+
+        private MetaDataPolozkaHodnota hodnotaField;
+
+        private string identifikatorField;
+
+        private MetaDataPolozkaTyp typField;
+
+        private bool typFieldSpecified;
+
+        private string nazevField;
+
+        /// <remarks/>
+        public MetaDataPolozkaHodnota Hodnota
+        {
+            get
+            {
+                return this.hodnotaField;
+            }
+            set
+            {
+                this.hodnotaField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string Identifikator
+        {
+            get
+            {
+                return this.identifikatorField;
+            }
+            set
+            {
+                this.identifikatorField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public MetaDataPolozkaTyp Typ
+        {
+            get
+            {
+                return this.typField;
+            }
+            set
+            {
+                this.typField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TypSpecified
+        {
+            get
+            {
+                return this.typFieldSpecified;
+            }
+            set
+            {
+                this.typFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string Nazev
+        {
+            get
+            {
+                return this.nazevField;
+            }
+            set
+            {
+                this.nazevField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class MetaDataPolozkaHodnota
+    {
+
+        private object itemField;
+
+        private ItemChoiceType itemElementNameField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Castka", typeof(MetaDataPolozkaHodnotaCastka))]
+        [System.Xml.Serialization.XmlElementAttribute("CeleCislo", typeof(int))]
+        [System.Xml.Serialization.XmlElementAttribute("Ciselnik", typeof(string))]
+        [System.Xml.Serialization.XmlElementAttribute("Cislo", typeof(double))]
+        [System.Xml.Serialization.XmlElementAttribute("Datum", typeof(System.DateTime))]
+        [System.Xml.Serialization.XmlElementAttribute("Retezec", typeof(string))]
+        [System.Xml.Serialization.XmlElementAttribute("Ucet", typeof(string))]
+        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
+        public object Item
+        {
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public ItemChoiceType ItemElementName
+        {
+            get
+            {
+                return this.itemElementNameField;
+            }
+            set
+            {
+                this.itemElementNameField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class MetaDataPolozkaHodnotaCastka
+    {
+
+        private double hodnotaField;
+
+        private bool hodnotaFieldSpecified;
+
+        private string typMenyField;
+
+        /// <remarks/>
+        public double Hodnota
+        {
+            get
+            {
+                return this.hodnotaField;
+            }
+            set
+            {
+                this.hodnotaField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool HodnotaSpecified
+        {
+            get
+            {
+                return this.hodnotaFieldSpecified;
+            }
+            set
+            {
+                this.hodnotaFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        public string TypMeny
+        {
+            get
+            {
+                return this.typMenyField;
+            }
+            set
+            {
+                this.typMenyField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IncludeInSchema = false)]
+    public enum ItemChoiceType
+    {
+
+        /// <remarks/>
+        Castka,
+
+        /// <remarks/>
+        CeleCislo,
+
+        /// <remarks/>
+        Ciselnik,
+
+        /// <remarks/>
+        Cislo,
+
+        /// <remarks/>
+        Datum,
+
+        /// <remarks/>
+        Retezec,
+
+        /// <remarks/>
+        Ucet,
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public enum MetaDataPolozkaTyp
+    {
+
+        /// <remarks/>
+        retezec,
+
+        /// <remarks/>
+        combo,
+
+        /// <remarks/>
+        cislo_uctu,
+
+        /// <remarks/>
+        castka,
+
+        /// <remarks/>
+        cele_cislo,
+
+        /// <remarks/>
+        numeric,
+
+        /// <remarks/>
+        long_text,
+
+        /// <remarks/>
+        date,
+
+        /// <remarks/>
+        comboEnum,
+
+        /// <remarks/>
+        alphanumeric,
+
+        /// <remarks/>
+        alphabetic,
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class MetaDataDefinice
+    {
+
+        private MetaDataDefinicePolozka[] polozkaField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Polozka")]
+        public MetaDataDefinicePolozka[] Polozka
+        {
+            get
+            {
+                return this.polozkaField;
+            }
+            set
+            {
+                this.polozkaField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class MetaDataDefinicePolozka
+    {
+
+        private MetaDataDefinicePolozkaDefinice definiceField;
+
+        private string identifikatorField;
+
+        private MetaDataDefinicePolozkaTyp typField;
+
+        private bool typFieldSpecified;
+
+        private string nazevField;
+
+        private bool povinnostField;
+
+        private bool povinnostFieldSpecified;
+
+        private string parametryField;
+
+        /// <remarks/>
+        public MetaDataDefinicePolozkaDefinice Definice
+        {
+            get
+            {
+                return this.definiceField;
+            }
+            set
+            {
+                this.definiceField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string Identifikator
+        {
+            get
+            {
+                return this.identifikatorField;
+            }
+            set
+            {
+                this.identifikatorField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public MetaDataDefinicePolozkaTyp Typ
+        {
+            get
+            {
+                return this.typField;
+            }
+            set
+            {
+                this.typField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TypSpecified
+        {
+            get
+            {
+                return this.typFieldSpecified;
+            }
+            set
+            {
+                this.typFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string Nazev
+        {
+            get
+            {
+                return this.nazevField;
+            }
+            set
+            {
+                this.nazevField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public bool Povinnost
+        {
+            get
+            {
+                return this.povinnostField;
+            }
+            set
+            {
+                this.povinnostField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PovinnostSpecified
+        {
+            get
+            {
+                return this.povinnostFieldSpecified;
+            }
+            set
+            {
+                this.povinnostFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string Parametry
+        {
+            get
+            {
+                return this.parametryField;
+            }
+            set
+            {
+                this.parametryField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class MetaDataDefinicePolozkaDefinice
+    {
+
+        private object itemField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("DefiniceCastka", typeof(MetaDataDefinicePolozkaDefiniceDefiniceCastka))]
+        [System.Xml.Serialization.XmlElementAttribute("DefiniceCombo", typeof(MetaDataDefinicePolozkaDefiniceDefiniceCombo))]
+        public object Item
+        {
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class MetaDataDefinicePolozkaDefiniceDefiniceCastka
+    {
+
+        private string[] typMenyField;
+
+        private int desetinnaMistaField;
+
+        private bool desetinnaMistaFieldSpecified;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("TypMeny")]
+        public string[] TypMeny
+        {
+            get
+            {
+                return this.typMenyField;
+            }
+            set
+            {
+                this.typMenyField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public int DesetinnaMista
+        {
+            get
+            {
+                return this.desetinnaMistaField;
+            }
+            set
+            {
+                this.desetinnaMistaField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DesetinnaMistaSpecified
+        {
+            get
+            {
+                return this.desetinnaMistaFieldSpecified;
+            }
+            set
+            {
+                this.desetinnaMistaFieldSpecified = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class MetaDataDefinicePolozkaDefiniceDefiniceCombo
+    {
+
+        private MetaDataDefinicePolozkaDefiniceDefiniceComboPolozka[] polozkaField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Polozka")]
+        public MetaDataDefinicePolozkaDefiniceDefiniceComboPolozka[] Polozka
+        {
+            get
+            {
+                return this.polozkaField;
+            }
+            set
+            {
+                this.polozkaField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class MetaDataDefinicePolozkaDefiniceDefiniceComboPolozka
+    {
+
+        private string kodField;
+
+        private string zobrazovanaHodnotaField;
+
+        private bool aktivniField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string Kod
+        {
+            get
+            {
+                return this.kodField;
+            }
+            set
+            {
+                this.kodField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string ZobrazovanaHodnota
+        {
+            get
+            {
+                return this.zobrazovanaHodnotaField;
+            }
+            set
+            {
+                this.zobrazovanaHodnotaField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public bool Aktivni
+        {
+            get
+            {
+                return this.aktivniField;
+            }
+            set
+            {
+                this.aktivniField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public enum MetaDataDefinicePolozkaTyp
+    {
+
+        /// <remarks/>
+        retezec,
+
+        /// <remarks/>
+        combo,
+
+        /// <remarks/>
+        cislo_uctu,
+
+        /// <remarks/>
+        castka,
+
+        /// <remarks/>
+        cele_cislo,
+
+        /// <remarks/>
+        numeric,
+
+        /// <remarks/>
+        long_text,
+
+        /// <remarks/>
+        date,
+
+        /// <remarks/>
+        comboEnum,
+
+        /// <remarks/>
+        alphanumeric,
+
+        /// <remarks/>
+        alphabetic,
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class PrideleneSeznamFiltr
+    {
+
+        private PrideleneSeznamFiltrTypFiltru typFiltruField;
+
+        /// <remarks/>
+        public PrideleneSeznamFiltrTypFiltru TypFiltru
+        {
+            get
+            {
+                return this.typFiltruField;
+            }
+            set
+            {
+                this.typFiltruField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public enum PrideleneSeznamFiltrTypFiltru
+    {
+
+        /// <remarks/>
+        DokumentyVeSpisu,
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class SkartacniUdajeVecneSkupiny
+    {
+
+        private string skartacniZnakField;
+
+        private string skartacniLhutaField;
+
+        private string plneUrcenySpisovyZnakField;
+
+        private string typSpousteciUdalostiField;
+
+        /// <remarks/>
+        public string SkartacniZnak
+        {
+            get
+            {
+                return this.skartacniZnakField;
+            }
+            set
+            {
+                this.skartacniZnakField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string SkartacniLhuta
+        {
+            get
+            {
+                return this.skartacniLhutaField;
+            }
+            set
+            {
+                this.skartacniLhutaField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string PlneUrcenySpisovyZnak
+        {
+            get
+            {
+                return this.plneUrcenySpisovyZnakField;
+            }
+            set
+            {
+                this.plneUrcenySpisovyZnakField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string TypSpousteciUdalosti
+        {
+            get
+            {
+                return this.typSpousteciUdalostiField;
+            }
+            set
+            {
+                this.typSpousteciUdalostiField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class TypyKomponent
+    {
+
+        private TypyKomponentTypKomponentyUzivatelsky[] typKomponentyUzivatelskyField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("TypKomponentyUzivatelsky")]
+        public TypyKomponentTypKomponentyUzivatelsky[] TypKomponentyUzivatelsky
+        {
+            get
+            {
+                return this.typKomponentyUzivatelskyField;
+            }
+            set
+            {
+                this.typKomponentyUzivatelskyField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class TypyKomponentTypKomponentyUzivatelsky
+    {
+
+        private string kodField;
+
+        private string nazevField;
+
+        private TypyKomponentTypKomponentyUzivatelskyUnikatnost unikatnostField;
+
+        /// <remarks/>
+        public string Kod
+        {
+            get
+            {
+                return this.kodField;
+            }
+            set
+            {
+                this.kodField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Nazev
+        {
+            get
+            {
+                return this.nazevField;
+            }
+            set
+            {
+                this.nazevField = value;
+            }
+        }
+
+        /// <remarks/>
+        public TypyKomponentTypKomponentyUzivatelskyUnikatnost Unikatnost
+        {
+            get
+            {
+                return this.unikatnostField;
+            }
+            set
+            {
+                this.unikatnostField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public enum TypyKomponentTypKomponentyUzivatelskyUnikatnost
+    {
+
+        /// <remarks/>
+        ano,
+
+        /// <remarks/>
+        ne,
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class UdelenaZpristupneni
+    {
+
+        private Zpristupneni[] zpristupneniField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Zpristupneni")]
+        public Zpristupneni[] Zpristupneni
+        {
+            get
+            {
+                return this.zpristupneniField;
+            }
+            set
+            {
+                this.zpristupneniField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class VlastnikCertifikatu
+    {
+
+        private string vlastnikJmenoField;
+
+        private string vlastnikPoziceNazevField;
+
+        private string vlastnikIdField;
+
+        private VlastnikCertifikatuCertifikat[] certifikatField;
+
+        /// <remarks/>
+        public string VlastnikJmeno
+        {
+            get
+            {
+                return this.vlastnikJmenoField;
+            }
+            set
+            {
+                this.vlastnikJmenoField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string VlastnikPoziceNazev
+        {
+            get
+            {
+                return this.vlastnikPoziceNazevField;
+            }
+            set
+            {
+                this.vlastnikPoziceNazevField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string VlastnikId
+        {
+            get
+            {
+                return this.vlastnikIdField;
+            }
+            set
+            {
+                this.vlastnikIdField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Certifikat")]
+        public VlastnikCertifikatuCertifikat[] Certifikat
+        {
+            get
+            {
+                return this.certifikatField;
+            }
+            set
+            {
+                this.certifikatField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class VlastnikCertifikatuCertifikat
+    {
+
+        private string serioveCisloField;
+
+        private string nazevField;
+
+        private string poskytovatelField;
+
+        private string typCeritfikatuNazevField;
+
+        private string typCeritfikatuKodField;
+
+        private System.DateTime platnostOdField;
+
+        private System.DateTime platnostDoField;
+
+        /// <remarks/>
+        public string SerioveCislo
+        {
+            get
+            {
+                return this.serioveCisloField;
+            }
+            set
+            {
+                this.serioveCisloField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable = true)]
+        public string Nazev
+        {
+            get
+            {
+                return this.nazevField;
+            }
+            set
+            {
+                this.nazevField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable = true)]
+        public string Poskytovatel
+        {
+            get
+            {
+                return this.poskytovatelField;
+            }
+            set
+            {
+                this.poskytovatelField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string TypCeritfikatuNazev
+        {
+            get
+            {
+                return this.typCeritfikatuNazevField;
+            }
+            set
+            {
+                this.typCeritfikatuNazevField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string TypCeritfikatuKod
+        {
+            get
+            {
+                return this.typCeritfikatuKodField;
+            }
+            set
+            {
+                this.typCeritfikatuKodField = value;
+            }
+        }
+
+        /// <remarks/>
+        public System.DateTime PlatnostOd
+        {
+            get
+            {
+                return this.platnostOdField;
+            }
+            set
+            {
+                this.platnostOdField = value;
+            }
+        }
+
+        /// <remarks/>
+        public System.DateTime PlatnostDo
+        {
+            get
+            {
+                return this.platnostDoField;
+            }
+            set
+            {
+                this.platnostDoField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class Vyrizeni
+    {
+
+        private tVyrizeni tVyrizeniField;
+
+        /// <remarks/>
+        public tVyrizeni tVyrizeni
+        {
+            get
+            {
+                return this.tVyrizeniField;
+            }
+            set
+            {
+                this.tVyrizeniField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class KomponentaNovaVerze
+    {
+
+        private string komponentaIdPuvodniField;
+
+        private tKomponentaDoplnujiciData komponentaNovaVerzeInfoField;
+
+        /// <remarks/>
+        public string KomponentaIdPuvodni
+        {
+            get
+            {
+                return this.komponentaIdPuvodniField;
+            }
+            set
+            {
+                this.komponentaIdPuvodniField = value;
+            }
+        }
+
+        /// <remarks/>
+        public tKomponentaDoplnujiciData KomponentaNovaVerzeInfo
+        {
+            get
+            {
+                return this.komponentaNovaVerzeInfoField;
+            }
+            set
+            {
+                this.komponentaNovaVerzeInfoField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class OdebraniZpristupneni
+    {
+
+        private Zpristupneni zpristupneniField;
+
+        private tAutorizace autorizaceField;
+
+        /// <remarks/>
+        public Zpristupneni Zpristupneni
+        {
+            get
+            {
+                return this.zpristupneniField;
+            }
+            set
+            {
+                this.zpristupneniField = value;
+            }
+        }
+
+        /// <remarks/>
+        public tAutorizace Autorizace
+        {
+            get
+            {
                 return this.autorizaceField;
             }
-            set {
+            set
+            {
                 this.autorizaceField = value;
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://mit-consulting.cz/erms-ext")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://mit-consulting.cz/erms-ext", IsNullable=false)]
-    public partial class UdelitZpristupneni {
-        
-        private Zpristupneni[] zpristupneniField;
-        
-        private tAutorizace autorizaceField;
-        
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class PodpisovaKnihaOdmitnuto
+    {
+
+        private string komponentaIdField;
+
+        private string oduvodneniField;
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Zpristupneni")]
-        public Zpristupneni[] Zpristupneni {
-            get {
+        public string KomponentaId
+        {
+            get
+            {
+                return this.komponentaIdField;
+            }
+            set
+            {
+                this.komponentaIdField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Oduvodneni
+        {
+            get
+            {
+                return this.oduvodneniField;
+            }
+            set
+            {
+                this.oduvodneniField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class PodpisovaKnihaPodepsano
+    {
+
+        private string komponentaIdPuvodniField;
+
+        private string komponentaIdPodepsanaField;
+
+        /// <remarks/>
+        public string KomponentaIdPuvodni
+        {
+            get
+            {
+                return this.komponentaIdPuvodniField;
+            }
+            set
+            {
+                this.komponentaIdPuvodniField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string KomponentaIdPodepsana
+        {
+            get
+            {
+                return this.komponentaIdPodepsanaField;
+            }
+            set
+            {
+                this.komponentaIdPodepsanaField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class PodpisovaKnihaZadostSchvaleni
+    {
+
+        private string komponentaIdPodepsanaField;
+
+        private string dokumentIdField;
+
+        private string dokumentCisloJednaciField;
+
+        /// <remarks/>
+        public string KomponentaIdPodepsana
+        {
+            get
+            {
+                return this.komponentaIdPodepsanaField;
+            }
+            set
+            {
+                this.komponentaIdPodepsanaField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string DokumentId
+        {
+            get
+            {
+                return this.dokumentIdField;
+            }
+            set
+            {
+                this.dokumentIdField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string DokumentCisloJednaci
+        {
+            get
+            {
+                return this.dokumentCisloJednaciField;
+            }
+            set
+            {
+                this.dokumentCisloJednaciField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class UdeleniZpristupneni
+    {
+
+        private Zpristupneni zpristupneniField;
+
+        private tAutorizace autorizaceField;
+
+        /// <remarks/>
+        public Zpristupneni Zpristupneni
+        {
+            get
+            {
                 return this.zpristupneniField;
             }
-            set {
+            set
+            {
                 this.zpristupneniField = value;
             }
         }
-        
+
         /// <remarks/>
-        public tAutorizace Autorizace {
-            get {
+        public tAutorizace Autorizace
+        {
+            get
+            {
                 return this.autorizaceField;
             }
-            set {
+            set
+            {
+                this.autorizaceField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class ExterniCiselnikNaplneni
+    {
+
+        private ExterniCiselnikNaplneniExterniCiselnik externiCiselnikField;
+
+        /// <remarks/>
+        public ExterniCiselnikNaplneniExterniCiselnik ExterniCiselnik
+        {
+            get
+            {
+                return this.externiCiselnikField;
+            }
+            set
+            {
+                this.externiCiselnikField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class ExterniCiselnikNaplneniExterniCiselnik
+    {
+
+        private ExterniCiselnikNaplneniExterniCiselnikCiselnikPolozka[] ciselnikPolozkaField;
+
+        private string ciselnikIdentifikatorField;
+
+        private string ciselnikHesloField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("CiselnikPolozka")]
+        public ExterniCiselnikNaplneniExterniCiselnikCiselnikPolozka[] CiselnikPolozka
+        {
+            get
+            {
+                return this.ciselnikPolozkaField;
+            }
+            set
+            {
+                this.ciselnikPolozkaField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string CiselnikIdentifikator
+        {
+            get
+            {
+                return this.ciselnikIdentifikatorField;
+            }
+            set
+            {
+                this.ciselnikIdentifikatorField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string CiselnikHeslo
+        {
+            get
+            {
+                return this.ciselnikHesloField;
+            }
+            set
+            {
+                this.ciselnikHesloField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class ExterniCiselnikNaplneniExterniCiselnikCiselnikPolozka
+    {
+
+        private string klicField;
+
+        private string hodnotaField;
+
+        /// <remarks/>
+        public string Klic
+        {
+            get
+            {
+                return this.klicField;
+            }
+            set
+            {
+                this.klicField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Hodnota
+        {
+            get
+            {
+                return this.hodnotaField;
+            }
+            set
+            {
+                this.hodnotaField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class KonverzeDokumentu
+    {
+
+        private tFile[] zalozeniSouboruField;
+
+        private string identifikatorDokumentAnalogovyField;
+
+        private tFileLinksArray odkazyNaSouboryField;
+
+        private KonverzeDokumentuPotvrzeniShody potvrzeniShodyField;
+
+        private KonverzeDokumentuOkamziteZniceniAnalogoveCasti okamziteZniceniAnalogoveCastiField;
+
+        private KonverzeDokumentuTypKonverze typKonverzeField;
+
+        private tAutorizace autorizaceField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ZalozeniSouboru")]
+        public tFile[] ZalozeniSouboru
+        {
+            get
+            {
+                return this.zalozeniSouboruField;
+            }
+            set
+            {
+                this.zalozeniSouboruField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string IdentifikatorDokumentAnalogovy
+        {
+            get
+            {
+                return this.identifikatorDokumentAnalogovyField;
+            }
+            set
+            {
+                this.identifikatorDokumentAnalogovyField = value;
+            }
+        }
+
+        /// <remarks/>
+        public tFileLinksArray OdkazyNaSoubory
+        {
+            get
+            {
+                return this.odkazyNaSouboryField;
+            }
+            set
+            {
+                this.odkazyNaSouboryField = value;
+            }
+        }
+
+        /// <remarks/>
+        public KonverzeDokumentuPotvrzeniShody PotvrzeniShody
+        {
+            get
+            {
+                return this.potvrzeniShodyField;
+            }
+            set
+            {
+                this.potvrzeniShodyField = value;
+            }
+        }
+
+        /// <remarks/>
+        public KonverzeDokumentuOkamziteZniceniAnalogoveCasti OkamziteZniceniAnalogoveCasti
+        {
+            get
+            {
+                return this.okamziteZniceniAnalogoveCastiField;
+            }
+            set
+            {
+                this.okamziteZniceniAnalogoveCastiField = value;
+            }
+        }
+
+        /// <remarks/>
+        public KonverzeDokumentuTypKonverze TypKonverze
+        {
+            get
+            {
+                return this.typKonverzeField;
+            }
+            set
+            {
+                this.typKonverzeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public tAutorizace Autorizace
+        {
+            get
+            {
+                return this.autorizaceField;
+            }
+            set
+            {
+                this.autorizaceField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.mvcr.cz/nsesss/2024/api")]
+    public partial class tFile
+    {
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.mvcr.cz/nsesss/2024/api")]
+    public partial class tFileLinksArray
+    {
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public enum KonverzeDokumentuPotvrzeniShody
+    {
+
+        /// <remarks/>
+        ano,
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public enum KonverzeDokumentuOkamziteZniceniAnalogoveCasti
+    {
+
+        /// <remarks/>
+        ano,
+
+        /// <remarks/>
+        ne,
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public enum KonverzeDokumentuTypKonverze
+    {
+
+        /// <remarks/>
+        NeautorizovanaAnalogDigital,
+
+        /// <remarks/>
+        NeautorizovanaDigitalAnalog,
+
+        /// <remarks/>
+        AutorizovanaAnalogDigital,
+
+        /// <remarks/>
+        AutorizovanaDigitalAnalog,
+
+        /// <remarks/>
+        ZMociUredniAnalogDigital,
+
+        /// <remarks/>
+        ZMociUredniDigitalAnalog,
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class OdebratZPodpisoveKnihy
+    {
+
+        private string komponentaIdField;
+
+        private string oduvodneniField;
+
+        private tAutorizace autorizaceField;
+
+        /// <remarks/>
+        public string KomponentaId
+        {
+            get
+            {
+                return this.komponentaIdField;
+            }
+            set
+            {
+                this.komponentaIdField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Oduvodneni
+        {
+            get
+            {
+                return this.oduvodneniField;
+            }
+            set
+            {
+                this.oduvodneniField = value;
+            }
+        }
+
+        /// <remarks/>
+        public tAutorizace Autorizace
+        {
+            get
+            {
+                return this.autorizaceField;
+            }
+            set
+            {
+                this.autorizaceField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class OdebratZpristupneni
+    {
+
+        private Zpristupneni[] zpristupneniField;
+
+        private tAutorizace autorizaceField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Zpristupneni")]
+        public Zpristupneni[] Zpristupneni
+        {
+            get
+            {
+                return this.zpristupneniField;
+            }
+            set
+            {
+                this.zpristupneniField = value;
+            }
+        }
+
+        /// <remarks/>
+        public tAutorizace Autorizace
+        {
+            get
+            {
+                return this.autorizaceField;
+            }
+            set
+            {
+                this.autorizaceField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class PodpisOdmitnuti
+    {
+
+        private string oduvodneniField;
+
+        private string komponentaIdField;
+
+        private tAutorizace autorizaceField;
+
+        /// <remarks/>
+        public string Oduvodneni
+        {
+            get
+            {
+                return this.oduvodneniField;
+            }
+            set
+            {
+                this.oduvodneniField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string KomponentaId
+        {
+            get
+            {
+                return this.komponentaIdField;
+            }
+            set
+            {
+                this.komponentaIdField = value;
+            }
+        }
+
+        /// <remarks/>
+        public tAutorizace Autorizace
+        {
+            get
+            {
+                return this.autorizaceField;
+            }
+            set
+            {
+                this.autorizaceField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class PodpisSchvaleniOdmitnuto
+    {
+
+        private string oduvodneniField;
+
+        private string komponentaIdField;
+
+        private tAutorizace autorizaceField;
+
+        /// <remarks/>
+        public string Oduvodneni
+        {
+            get
+            {
+                return this.oduvodneniField;
+            }
+            set
+            {
+                this.oduvodneniField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string KomponentaId
+        {
+            get
+            {
+                return this.komponentaIdField;
+            }
+            set
+            {
+                this.komponentaIdField = value;
+            }
+        }
+
+        /// <remarks/>
+        public tAutorizace Autorizace
+        {
+            get
+            {
+                return this.autorizaceField;
+            }
+            set
+            {
+                this.autorizaceField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class PodpisSchvaleniSchvaleno
+    {
+
+        private string komponentaIdField;
+
+        private tAutorizace autorizaceField;
+
+        /// <remarks/>
+        public string KomponentaId
+        {
+            get
+            {
+                return this.komponentaIdField;
+            }
+            set
+            {
+                this.komponentaIdField = value;
+            }
+        }
+
+        /// <remarks/>
+        public tAutorizace Autorizace
+        {
+            get
+            {
+                return this.autorizaceField;
+            }
+            set
+            {
+                this.autorizaceField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class PodpisZruseni
+    {
+
+        private string komponentaIdField;
+
+        private string oduvodneniField;
+
+        private tAutorizace autorizaceField;
+
+        /// <remarks/>
+        public string KomponentaId
+        {
+            get
+            {
+                return this.komponentaIdField;
+            }
+            set
+            {
+                this.komponentaIdField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Oduvodneni
+        {
+            get
+            {
+                return this.oduvodneniField;
+            }
+            set
+            {
+                this.oduvodneniField = value;
+            }
+        }
+
+        /// <remarks/>
+        public tAutorizace Autorizace
+        {
+            get
+            {
+                return this.autorizaceField;
+            }
+            set
+            {
+                this.autorizaceField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class PredatDoPodpisoveKnihy
+    {
+
+        private string komponentaIdField;
+
+        private string poznamkaField;
+
+        private string podepisujiciIdField;
+
+        private VizualizacePodpisu vizualizacePodpisuField;
+
+        private tAutorizace autorizaceField;
+
+        /// <remarks/>
+        public string KomponentaId
+        {
+            get
+            {
+                return this.komponentaIdField;
+            }
+            set
+            {
+                this.komponentaIdField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Poznamka
+        {
+            get
+            {
+                return this.poznamkaField;
+            }
+            set
+            {
+                this.poznamkaField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string PodepisujiciId
+        {
+            get
+            {
+                return this.podepisujiciIdField;
+            }
+            set
+            {
+                this.podepisujiciIdField = value;
+            }
+        }
+
+        /// <remarks/>
+        public VizualizacePodpisu VizualizacePodpisu
+        {
+            get
+            {
+                return this.vizualizacePodpisuField;
+            }
+            set
+            {
+                this.vizualizacePodpisuField = value;
+            }
+        }
+
+        /// <remarks/>
+        public tAutorizace Autorizace
+        {
+            get
+            {
+                return this.autorizaceField;
+            }
+            set
+            {
+                this.autorizaceField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class PredatDoPodpisoveKnihyExterni
+    {
+
+        private string komponentaIdField;
+
+        private string poznamkaField;
+
+        private string podepisujiciMailField;
+
+        private string podepisujiciTelefonField;
+
+        private VizualizacePodpisu vizualizacePodpisuField;
+
+        private tAutorizace autorizaceField;
+
+        /// <remarks/>
+        public string KomponentaId
+        {
+            get
+            {
+                return this.komponentaIdField;
+            }
+            set
+            {
+                this.komponentaIdField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Poznamka
+        {
+            get
+            {
+                return this.poznamkaField;
+            }
+            set
+            {
+                this.poznamkaField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string PodepisujiciMail
+        {
+            get
+            {
+                return this.podepisujiciMailField;
+            }
+            set
+            {
+                this.podepisujiciMailField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string PodepisujiciTelefon
+        {
+            get
+            {
+                return this.podepisujiciTelefonField;
+            }
+            set
+            {
+                this.podepisujiciTelefonField = value;
+            }
+        }
+
+        /// <remarks/>
+        public VizualizacePodpisu VizualizacePodpisu
+        {
+            get
+            {
+                return this.vizualizacePodpisuField;
+            }
+            set
+            {
+                this.vizualizacePodpisuField = value;
+            }
+        }
+
+        /// <remarks/>
+        public tAutorizace Autorizace
+        {
+            get
+            {
+                return this.autorizaceField;
+            }
+            set
+            {
+                this.autorizaceField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class PripojeniVerzeKomponenty
+    {
+
+        private string identifikatorRodicField;
+
+        private string identifikatorKomponentaField;
+
+        private string typKomponentyField;
+
+        private tAutorizace autorizaceField;
+
+        /// <remarks/>
+        public string IdentifikatorRodic
+        {
+            get
+            {
+                return this.identifikatorRodicField;
+            }
+            set
+            {
+                this.identifikatorRodicField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string IdentifikatorKomponenta
+        {
+            get
+            {
+                return this.identifikatorKomponentaField;
+            }
+            set
+            {
+                this.identifikatorKomponentaField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string TypKomponenty
+        {
+            get
+            {
+                return this.typKomponentyField;
+            }
+            set
+            {
+                this.typKomponentyField = value;
+            }
+        }
+
+        /// <remarks/>
+        public tAutorizace Autorizace
+        {
+            get
+            {
+                return this.autorizaceField;
+            }
+            set
+            {
+                this.autorizaceField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class ProtokolOvereniZadostRequest
+    {
+
+        private string identifikatorKomponentaField;
+
+        private tAutorizace autorizaceField;
+
+        private string zdrojField;
+
+        private string cilField;
+
+        /// <remarks/>
+        public string IdentifikatorKomponenta
+        {
+            get
+            {
+                return this.identifikatorKomponentaField;
+            }
+            set
+            {
+                this.identifikatorKomponentaField = value;
+            }
+        }
+
+        /// <remarks/>
+        public tAutorizace Autorizace
+        {
+            get
+            {
+                return this.autorizaceField;
+            }
+            set
+            {
+                this.autorizaceField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string Zdroj
+        {
+            get
+            {
+                return this.zdrojField;
+            }
+            set
+            {
+                this.zdrojField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string Cil
+        {
+            get
+            {
+                return this.cilField;
+            }
+            set
+            {
+                this.cilField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class ProtokolOvereniZadostResponse
+    {
+
+        private VysledekOvereni vysledekOvereniField;
+
+        private tOperaceStatus operaceStatusField;
+
+        /// <remarks/>
+        public VysledekOvereni VysledekOvereni
+        {
+            get
+            {
+                return this.vysledekOvereniField;
+            }
+            set
+            {
+                this.vysledekOvereniField = value;
+            }
+        }
+
+        /// <remarks/>
+        public tOperaceStatus OperaceStatus
+        {
+            get
+            {
+                return this.operaceStatusField;
+            }
+            set
+            {
+                this.operaceStatusField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class VysledekOvereni
+    {
+
+        private string identifikatorKomponentaField;
+
+        private System.DateTime datumCasOvereniField;
+
+        private string vysledekOvereniTextField;
+
+        private VysledekOvereniFinalniOvereni finalniOvereniField;
+
+        private VysledekOvereniZajistovaciPrvek[] zajistovaciPrvekField;
+
+        private byte[] materializaceOvereniField;
+
+        /// <remarks/>
+        public string IdentifikatorKomponenta
+        {
+            get
+            {
+                return this.identifikatorKomponentaField;
+            }
+            set
+            {
+                this.identifikatorKomponentaField = value;
+            }
+        }
+
+        /// <remarks/>
+        public System.DateTime DatumCasOvereni
+        {
+            get
+            {
+                return this.datumCasOvereniField;
+            }
+            set
+            {
+                this.datumCasOvereniField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string VysledekOvereniText
+        {
+            get
+            {
+                return this.vysledekOvereniTextField;
+            }
+            set
+            {
+                this.vysledekOvereniTextField = value;
+            }
+        }
+
+        /// <remarks/>
+        public VysledekOvereniFinalniOvereni FinalniOvereni
+        {
+            get
+            {
+                return this.finalniOvereniField;
+            }
+            set
+            {
+                this.finalniOvereniField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ZajistovaciPrvek")]
+        public VysledekOvereniZajistovaciPrvek[] ZajistovaciPrvek
+        {
+            get
+            {
+                return this.zajistovaciPrvekField;
+            }
+            set
+            {
+                this.zajistovaciPrvekField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
+        public byte[] MaterializaceOvereni
+        {
+            get
+            {
+                return this.materializaceOvereniField;
+            }
+            set
+            {
+                this.materializaceOvereniField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public enum VysledekOvereniFinalniOvereni
+    {
+
+        /// <remarks/>
+        ano,
+
+        /// <remarks/>
+        ne,
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    public partial class VysledekOvereniZajistovaciPrvek
+    {
+
+        private string nazevField;
+
+        private System.DateTime datumCasVznikuField;
+
+        private bool datumCasVznikuFieldSpecified;
+
+        private string typZajistovacihoPrvkuField;
+
+        private string urovenCasovehoRazitkaField;
+
+        private System.DateTime datumCasRazitkaField;
+
+        private bool datumCasRazitkaFieldSpecified;
+
+        private System.DateTime datumCasRozhodneProOvereniField;
+
+        private bool datumCasRozhodneProOvereniFieldSpecified;
+
+        private string vysledekPlatnostiField;
+
+        private string duvodNerozhodnostiField;
+
+        private string serioveCisloField;
+
+        private string vydalField;
+
+        private System.DateTime platnyOdField;
+
+        private bool platnyOdFieldSpecified;
+
+        private System.DateTime platnyDoField;
+
+        private bool platnyDoFieldSpecified;
+
+        private System.DateTime datumCasZneplatneniField;
+
+        private bool datumCasZneplatneniFieldSpecified;
+
+        /// <remarks/>
+        public string Nazev
+        {
+            get
+            {
+                return this.nazevField;
+            }
+            set
+            {
+                this.nazevField = value;
+            }
+        }
+
+        /// <remarks/>
+        public System.DateTime DatumCasVzniku
+        {
+            get
+            {
+                return this.datumCasVznikuField;
+            }
+            set
+            {
+                this.datumCasVznikuField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DatumCasVznikuSpecified
+        {
+            get
+            {
+                return this.datumCasVznikuFieldSpecified;
+            }
+            set
+            {
+                this.datumCasVznikuFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        public string TypZajistovacihoPrvku
+        {
+            get
+            {
+                return this.typZajistovacihoPrvkuField;
+            }
+            set
+            {
+                this.typZajistovacihoPrvkuField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string UrovenCasovehoRazitka
+        {
+            get
+            {
+                return this.urovenCasovehoRazitkaField;
+            }
+            set
+            {
+                this.urovenCasovehoRazitkaField = value;
+            }
+        }
+
+        /// <remarks/>
+        public System.DateTime DatumCasRazitka
+        {
+            get
+            {
+                return this.datumCasRazitkaField;
+            }
+            set
+            {
+                this.datumCasRazitkaField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DatumCasRazitkaSpecified
+        {
+            get
+            {
+                return this.datumCasRazitkaFieldSpecified;
+            }
+            set
+            {
+                this.datumCasRazitkaFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        public System.DateTime DatumCasRozhodneProOvereni
+        {
+            get
+            {
+                return this.datumCasRozhodneProOvereniField;
+            }
+            set
+            {
+                this.datumCasRozhodneProOvereniField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DatumCasRozhodneProOvereniSpecified
+        {
+            get
+            {
+                return this.datumCasRozhodneProOvereniFieldSpecified;
+            }
+            set
+            {
+                this.datumCasRozhodneProOvereniFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        public string VysledekPlatnosti
+        {
+            get
+            {
+                return this.vysledekPlatnostiField;
+            }
+            set
+            {
+                this.vysledekPlatnostiField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string DuvodNerozhodnosti
+        {
+            get
+            {
+                return this.duvodNerozhodnostiField;
+            }
+            set
+            {
+                this.duvodNerozhodnostiField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string SerioveCislo
+        {
+            get
+            {
+                return this.serioveCisloField;
+            }
+            set
+            {
+                this.serioveCisloField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Vydal
+        {
+            get
+            {
+                return this.vydalField;
+            }
+            set
+            {
+                this.vydalField = value;
+            }
+        }
+
+        /// <remarks/>
+        public System.DateTime PlatnyOd
+        {
+            get
+            {
+                return this.platnyOdField;
+            }
+            set
+            {
+                this.platnyOdField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PlatnyOdSpecified
+        {
+            get
+            {
+                return this.platnyOdFieldSpecified;
+            }
+            set
+            {
+                this.platnyOdFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        public System.DateTime PlatnyDo
+        {
+            get
+            {
+                return this.platnyDoField;
+            }
+            set
+            {
+                this.platnyDoField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PlatnyDoSpecified
+        {
+            get
+            {
+                return this.platnyDoFieldSpecified;
+            }
+            set
+            {
+                this.platnyDoFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        public System.DateTime DatumCasZneplatneni
+        {
+            get
+            {
+                return this.datumCasZneplatneniField;
+            }
+            set
+            {
+                this.datumCasZneplatneniField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DatumCasZneplatneniSpecified
+        {
+            get
+            {
+                return this.datumCasZneplatneniFieldSpecified;
+            }
+            set
+            {
+                this.datumCasZneplatneniFieldSpecified = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.mvcr.cz/nsesss/2024/api")]
+    public partial class tOperaceStatus
+    {
+
+        private string kodField;
+
+        private string popisField;
+
+        /// <remarks/>
+        public string Kod
+        {
+            get
+            {
+                return this.kodField;
+            }
+            set
+            {
+                this.kodField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Popis
+        {
+            get
+            {
+                return this.popisField;
+            }
+            set
+            {
+                this.popisField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://mit-consulting.cz/erms-ext")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://mit-consulting.cz/erms-ext", IsNullable = false)]
+    public partial class UdelitZpristupneni
+    {
+
+        private Zpristupneni[] zpristupneniField;
+
+        private tAutorizace autorizaceField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Zpristupneni")]
+        public Zpristupneni[] Zpristupneni
+        {
+            get
+            {
+                return this.zpristupneniField;
+            }
+            set
+            {
+                this.zpristupneniField = value;
+            }
+        }
+
+        /// <remarks/>
+        public tAutorizace Autorizace
+        {
+            get
+            {
+                return this.autorizaceField;
+            }
+            set
+            {
                 this.autorizaceField = value;
             }
         }
