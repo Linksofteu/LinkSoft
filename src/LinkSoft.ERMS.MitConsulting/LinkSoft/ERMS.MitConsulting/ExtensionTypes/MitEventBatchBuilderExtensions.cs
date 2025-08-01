@@ -4,7 +4,7 @@ using LinkSoft.ERMS.Services;
 
 namespace LinkSoft.ERMS.MITConsulting.ExtensionTypes;
 
-public static class MitDavkaBuilderExtensions
+public static class MitEventBatchBuilderExtensions
 {
     public static EventBatchBuilder AddSubmitToSugnatureBookEvent(this EventBatchBuilder builder, SubmitToSignatureBookDto submitData, int order = 1)
     {
