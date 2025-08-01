@@ -8,7 +8,7 @@ public class ErmsException : Exception
 
     public override string Message => $"Chyba ERMS: {Kod} - {Popis}";
 
-    public ErmsException(string kod, IErmsLocalizationProvider localizationProvider = null)
+    public ErmsException(string kod, IErmsLocalizationProvider? localizationProvider = null)
         : this(kod, (localizationProvider ?? new DefaultErmsLocalizationProvider()).GetLocalizedMessage(kod))
     {
     }

@@ -3,7 +3,6 @@ using LinkSoft.ERMS.Errors;
 using LinkSoft.ERMS.Options;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Logging;
-using System.Xml.Serialization;
 
 namespace LinkSoft.ERMS.NotificationReceiving;
 
@@ -146,11 +145,12 @@ public class NotificationReceiver(IErmsNotificationHandler handler, ILogger<Noti
         }
     }
 
-    public async Task<WsTestResponse1> WsTestAsync(WsTestRequest1 request)
+    public Task<WsTestResponse1> WsTestAsync(WsTestRequest1 request)
     {
+        // TODO - ADD WsTestHandler
         var wsTest = request.WsTestRequest;
 
-        return new WsTestResponse1()
+        return Task.FromResult(new WsTestResponse1()
         {
             WsTestResponse = new WsTestResponse()
             {                
@@ -171,6 +171,6 @@ public class NotificationReceiver(IErmsNotificationHandler handler, ILogger<Noti
                     Stav = sStavDavky.Neodeslana
                 }
             }
-        };
+        });
     }
 }
