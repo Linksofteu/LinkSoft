@@ -19,7 +19,7 @@ public static class MitErmsServiceCollectionExtensions
     }
 
     public static IServiceCollection AddErmsMit<THandler>(this IServiceCollection services, Action<ErmsOptions>? configureOptions = null)
-        where THandler : MitUdalostiNotificationHandler, IErmsNotificationHandler
+        where THandler : MitEventNotificationHandler, IErmsNotificationHandler
     {
         Action<ErmsOptions> mitConfigureOptions = options =>
         {

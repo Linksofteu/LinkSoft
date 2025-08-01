@@ -3,7 +3,7 @@ using LinkSoft.ERMS.Services;
 
 namespace LinkSoft.ERMS.MitConsulting.Services;
 
-public abstract class MitUdalostiNotificationHandler : BaseEventOtherNotificationHandler
+public abstract class MitEventNotificationHandler : BaseEventOtherNotificationHandler
 {
     protected override Dictionary<string, Type> KnownUdalostiTypes => new()
     {
