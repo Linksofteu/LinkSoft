@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="../../common/common.props" />
+	<PropertyGroup>
+		<PackageId>LinkSoft.ERMS</PackageId>
+		<Description>Communication with eSSL</Description>
+		<PackageReleaseNotes>Init</PackageReleaseNotes>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authorization" Version="9.0.5" />
+		<PackageReference Include="SoapCore" Version="1.2.1.8" />
+	</ItemGroup>
+</Project>

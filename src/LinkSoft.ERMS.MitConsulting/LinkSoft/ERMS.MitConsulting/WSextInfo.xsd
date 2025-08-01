@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://mit-consulting.cz/erms-ext"
+           xmlns:tns="http://www.mvcr.cz/nsesss/2024/api" targetNamespace="http://mit-consulting.cz/erms-ext"
+           elementFormDefault="qualified" id="WSextInfo">
+	<xs:import namespace="http://www.mvcr.cz/nsesss/2024/api" schemaLocation="../../../../LinkSoft.ERMS/LinkSoft/ERMS/ermsTypes.xsd"/>
+	<xs:element name="DopisOnlineWS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TypTisku" nillable="false">
+					<xs:annotation>
+						<xs:documentation>
+							Společný přepínač pro všechny odeslané PDF soubory. Jedná se o povinný atribut.
+							0 – Jednostranný tisk
+							1 – Oboustranný tisk
+							2 – Typ tisku se bere z elementů uvedených u jednotlivých souborů
+						</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="jednostranny"/>
+							<xs:enumeration value="oboustranny"/>
+							<xs:enumeration value="nedefinovany"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Poukazka" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Struktura pro předávání poukázky.
+						</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Castka" nillable="true">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="\d{0,8}"></xs:pattern>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="PredcisliUctu" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="6"></xs:maxLength>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Ucet" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="10"></xs:maxLength>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="KodBanky" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="4"></xs:maxLength>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="VariabilniSymbol" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="10"></xs:maxLength>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="SpecifickySymbol" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="10"></xs:maxLength>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="KonstantniSymbol" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="4"></xs:maxLength>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="ZpravaProPrijemce1" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="35"></xs:maxLength>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="ZpravaProPrijemce2" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="35"></xs:maxLength>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="UcelPlatby" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="25"></xs:maxLength>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="AdresaMajiteleUctu" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="adr1" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="35"></xs:maxLength>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="adr2" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="35"></xs:maxLength>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="adr3" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="35"></xs:maxLength>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="adr4" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="35"></xs:maxLength>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Odesilatel" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="adr1" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="35"></xs:maxLength>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="adr2" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="35"></xs:maxLength>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="adr3" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="35"></xs:maxLength>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="adr4" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="35"></xs:maxLength>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ObalkaC4" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Pokud nebude element uveden, nebo bude s hodnotou 0, použije se standardní obálka.
+							1 – Bude použita obálka C4, bez ohledu na počet stránek
+						</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="ne"/>
+							<xs:enumeration value="ano"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EvidencniCislo">
+		<xs:annotation>
+			<xs:documentation>
+				Evidenční číslo zásilky
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="255"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="ExterniPodpis">
+		<xs:annotation>
+			<xs:documentation>
+				Struktura pro externí podpis.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="IdentifikatorKomponenta" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor komponenty.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Email" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							E-mail podepisujícího.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Telefon" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Telefon podepisujícího.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Poznamka" type="xs:string" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Poznámka pro podepisujícího.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="VizualizacePodpisu" type="VizualizacePodpisu" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Vizualizace podpisu.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="KomponentyDoplnujiciData">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="KomponentaDoplnujiciData" type="tKomponentaDoplnujiciData" minOccurs="1"
+                            maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>
+							Struktura obsahující doplňující info ke komponentě.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="KonicaMinoltaWS">
+		<xs:annotation>
+			<xs:documentation>
+				Struktura obsahující doplňující data pro vypravování pomocí služby Konica Minolta
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="EnvelopeMedia" nillable="false" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Typ obálky
+						</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="DocumentMedia" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Typ papíru
+						</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="RegisteredMail" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Způsob doručení
+						</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MetaData">
+		<xs:annotation>
+			<xs:documentation>
+				Struktura pro přenos hodnot dodatečně definovaných metadat entity.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Polozka" maxOccurs="unbounded" minOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Hodnota" maxOccurs="1" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="Datum" type="xs:dateTime" maxOccurs="1" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													Formát data se očekává XmlGregorianCalendar
+													(yyyy-MM-dd'T'HH:mm:ss'Z')
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="CeleCislo" type="xs:int" maxOccurs="1" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													Hodnota pro typ Celé číslo.
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Cislo" type="xs:double" maxOccurs="1" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													Hodnota pro typ Desetinné číslo.
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Retezec" type="xs:string" maxOccurs="1" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													Hodnota pro typ Řetězec nebo Dlouhý text.
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Castka" maxOccurs="1" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													Hodnota pro typ Částka.
+												</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Hodnota" type="xs:double" maxOccurs="1"
+                                                                minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																Hodnota.
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="TypMeny" type="xs:string" maxOccurs="1"
+                                                                minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																Měna.
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Ciselnik" type="xs:string" maxOccurs="1" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													Hodnota pro typ Combo.
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Ucet" type="xs:string" maxOccurs="1" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													Hodnota pro typ Číslo účtu.
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="Identifikator" type="xs:string"/>
+						<xs:attribute name="Typ">
+							<xs:annotation>
+								<xs:documentation>
+									Datový typ upravený výčtem.
+									retezec : Řetězec,
+									combo : Combo,
+									cislo_uctu : Číslo účtu,
+									castka : Částka,
+									cele_cislo : Celé číslo,
+									numeric : Desetinné číslo,
+									long_text : Dlouhý text,
+									date : Datum,
+									comboEnum : Combo z externího číselníku,
+									bool_val : Logická hodnota (ano/ne),
+									alphanumeric : Alfanumerický,
+									alphabetic : Alfabetický;
+								</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="retezec"/>
+									<xs:enumeration value="combo"/>
+									<xs:enumeration value="cislo_uctu"/>
+									<xs:enumeration value="castka"/>
+									<xs:enumeration value="cele_cislo"/>
+									<xs:enumeration value="numeric"/>
+									<xs:enumeration value="long_text"/>
+									<xs:enumeration value="date"/>
+									<xs:enumeration value="comboEnum"/>
+									<xs:enumeration value="alphanumeric"/>
+									<xs:enumeration value="alphabetic"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="Nazev" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MetaDataDefinice">
+		<xs:annotation>
+			<xs:documentation>
+				Struktura pro přenos definic dodatečně definovaných metadat entity.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Polozka" maxOccurs="unbounded" minOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Definice" maxOccurs="1" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="DefiniceCombo" maxOccurs="1" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													Definice pro typ Combo.
+												</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Polozka" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:attribute name="Kod" type="xs:string" use="required"/>
+															<xs:attribute name="ZobrazovanaHodnota" type="xs:string"
+                                                                          use="required"/>
+															<xs:attribute name="Aktivni" type="xs:boolean"
+                                                                          use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DefiniceCastka" maxOccurs="1" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													Definice pro typ Částka.
+												</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="TypMeny" type="xs:string" maxOccurs="unbounded"
+                                                                minOccurs="1">
+														<xs:annotation>
+															<xs:documentation>
+																Měna.
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="DesetinnaMista" type="xs:int"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="Identifikator" type="xs:string"/>
+						<xs:attribute name="Typ">
+							<xs:annotation>
+								<xs:documentation>
+									Datový typ upravený výčtem.
+									retezec : Řetězec,
+									combo : Combo,
+									cislo_uctu : Číslo účtu,
+									castka : Částka,
+									cele_cislo : Celé číslo,
+									numeric : Desetinné číslo,
+									long_text : Dlouhý text,
+									date : Datum,
+									comboEnum : Combo z externího číselníku,
+									bool_val : Logická hodnota (ano/ne),
+									alphanumeric : Alfanumerický,
+									alphabetic : Alfabetický;
+								</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="retezec"/>
+									<xs:enumeration value="combo"/>
+									<xs:enumeration value="cislo_uctu"/>
+									<xs:enumeration value="castka"/>
+									<xs:enumeration value="cele_cislo"/>
+									<xs:enumeration value="numeric"/>
+									<xs:enumeration value="long_text"/>
+									<xs:enumeration value="date"/>
+									<xs:enumeration value="comboEnum"/>
+									<xs:enumeration value="alphanumeric"/>
+									<xs:enumeration value="alphabetic"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="Nazev" type="xs:string"/>
+						<xs:attribute name="Povinnost" type="xs:boolean"/>
+						<xs:attribute name="Parametry" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OduvodneniPostoupeni">
+		<xs:annotation>
+			<xs:documentation>
+				Možnost udat odůvodnění postoupení do ERMS u dokumentu/spisu. Obsah odůvodnění se k entitě připojí jako
+				poznámka.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="2000"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="PristupovaUroven">
+		<xs:annotation>
+			<xs:documentation>
+				Identifikátor přéstupové úrovně
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="255"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="PrideleneSeznamFiltr">
+		<xs:annotation>
+			<xs:documentation>
+				Rozšiřující filtrační kritéria pro PrideleneSeznam
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TypFiltru">
+					<xs:annotation>
+						<xs:documentation>
+							Enumerace různých typů filtrů, které lze na volání PrideleSeznamRequest aplikovat
+						</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="DokumentyVeSpisu">
+								<xs:annotation>
+									<xs:documentation>
+										V případě dokumentů se načítají i dokumenty zatříděné ve spisu
+									</xs:documentation>
+								</xs:annotation>
+							</xs:enumeration>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SkartacniUdajeVecneSkupiny">
+		<xs:annotation>
+			<xs:documentation>
+				Struktura obsahující doplňující data o skartačním režimu věcné skupiny.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SkartacniZnak" type="xs:string" maxOccurs="1" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>
+							Skartační znak.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="SkartacniLhuta" type="xs:string" maxOccurs="1" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>
+							Skartační lhůta.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="PlneUrcenySpisovyZnak" type="xs:string" maxOccurs="1" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>
+							Plně určený spisový znak.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="TypSpousteciUdalosti" type="xs:string" maxOccurs="1" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>
+							Kód typu spouštěcí události.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="tKomponentaDoplnujiciData">
+		<xs:sequence>
+			<xs:element name="Identifikator" type="xs:string"/>
+			<xs:element name="TypKomponentyNsesss">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="main"/>
+						<xs:enumeration value="enclosure"/>
+						<xs:enumeration value="signature"/>
+						<xs:enumeration value="meta"/>
+						<xs:enumeration value="dorucenka"/>
+						<xs:enumeration value="protokol_overeni_podpisu"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TypKomponentySystemovy">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Kod">
+							<xs:simpleType>
+								<xs:restriction base="xs:string"></xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Nazev">
+							<xs:simpleType>
+								<xs:restriction base="xs:string"></xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="TypKomponentyUzivatelsky" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Kod">
+							<xs:simpleType>
+								<xs:restriction base="xs:string"></xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Nazev">
+							<xs:simpleType>
+								<xs:restriction base="xs:string"></xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Potomek" type="tKomponentaDoplnujiciData" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="TypSpousteciUdalosti">
+		<xs:annotation>
+			<xs:documentation>
+				Typ spouštěcí události navázaný na skartační reřim věcné skupiny.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="255"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="TypyKomponent">
+		<xs:annotation>
+			<xs:documentation>
+				Struktura obsahující seznam uživateslkých typů komponent, kterých může komponenta nabývat pro daný typ
+				dokumentu.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TypKomponentyUzivatelsky" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Kod">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"></xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Nazev">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"></xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Unikatnost">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="ano"/>
+										<xs:enumeration value="ne"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UdelenaZpristupneni">
+		<xs:annotation>
+			<xs:documentation>
+				Struktura obsahující seznam udělených zpřístupnění objektu.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Zpristupneni" type="Zpristupneni" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Varovani">
+		<xs:annotation>
+			<xs:documentation>
+				Doplňující struktura pro předávání varování
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="2000"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:complexType name="VizualizacePodpisu">
+		<xs:annotation>
+			<xs:documentation>
+				Definice umístění viditelného podpisu.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="PoziceX" nillable="false">
+				<xs:simpleType>
+					<xs:restriction base="xs:int"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PoziceY" nillable="false">
+				<xs:simpleType>
+					<xs:restriction base="xs:int"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CisloStrany" nillable="false">
+				<xs:simpleType>
+					<xs:restriction base="xs:int"/>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="VlastnikCertifikatu">
+		<xs:annotation>
+			<xs:documentation>
+				Struktura obsahující informaci o subjektu s certifikátem.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="VlastnikJmeno">
+					<xs:annotation>
+						<xs:documentation>
+							Jméno vlastníka certifikátu.
+						</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="VlastnikPoziceNazev">
+					<xs:annotation>
+						<xs:documentation>
+							Název pozice vlastníka certifikátu
+						</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="VlastnikId">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor vlastníka certifikátu.
+						</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Certifikat" minOccurs="1" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>
+							Informace o certifikátu.
+						</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SerioveCislo" nillable="false">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Nazev" nillable="true">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Poskytovatel" nillable="true">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="TypCeritfikatuNazev" nillable="false">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="TypCeritfikatuKod" nillable="false">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="PlatnostOd" type="xs:dateTime" nillable="false">
+								<xs:annotation>
+									<xs:documentation>
+										Datum zpřístupnění.
+										Formát data XmlGregorianCalendar (yyyy-MM-dd'T'HH:mm:ss'Z').
+									</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="PlatnostDo" type="xs:dateTime" nillable="false">
+								<xs:annotation>
+									<xs:documentation>
+										Datum expirace zpřístupnění
+										Formát data XmlGregorianCalendar (yyyy-MM-dd'T'HH:mm:ss'Z').
+									</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Votum">
+		<xs:annotation>
+			<xs:documentation>
+				Popis spisu.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="2000"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Vyrizeni">
+		<xs:annotation>
+			<xs:documentation>
+				Informace o vyřízení entity
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="tVyrizeni" type="tns:tVyrizeni">
+					<xs:annotation>
+						<xs:documentation>
+							Standardní struktura tVyrizeni z NSESSS.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="VyrizujiciDokument">
+		<xs:annotation>
+			<xs:documentation>
+				Identifikátor vyřizujícího dokumentu.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="255"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:complexType name="VysledekOvereni">
+		<xs:annotation>
+			<xs:documentation>
+				Strukturovaná data výsledku ověření bezpečnostních prvků komponenty.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="IdentifikatorKomponenta" type="xs:string"/>
+			<xs:element name="DatumCasOvereni" type="xs:dateTime"/>
+			<xs:element name="VysledekOvereniText" type="xs:string"/>
+			<xs:element name="FinalniOvereni">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="ano"/>
+						<xs:enumeration value="ne"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ZajistovaciPrvek" maxOccurs="unbounded" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Nazev" type="xs:string" minOccurs="0"/>
+						<xs:element name="DatumCasVzniku" type="xs:dateTime" minOccurs="0"/>
+						<xs:element name="TypZajistovacihoPrvku" type="xs:string" minOccurs="0"/>
+						<xs:element name="UrovenCasovehoRazitka" type="xs:string" minOccurs="0"/>
+						<xs:element name="DatumCasRazitka" type="xs:dateTime" minOccurs="0"/>
+						<xs:element name="DatumCasRozhodneProOvereni" type="xs:dateTime" minOccurs="0"/>
+						<xs:element name="VysledekPlatnosti" type="xs:string" minOccurs="0"/>
+						<xs:element name="DuvodNerozhodnosti" type="xs:string" minOccurs="0"/>
+						<xs:element name="SerioveCislo" type="xs:string" minOccurs="0"/>
+						<xs:element name="Vydal" type="xs:string" minOccurs="0"/>
+						<xs:element name="PlatnyOd" type="xs:dateTime" minOccurs="0"/>
+						<xs:element name="PlatnyDo" type="xs:dateTime" minOccurs="0"/>
+						<xs:element name="DatumCasZneplatneni" type="xs:dateTime" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="MaterializaceOvereni" type="xs:base64Binary"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Zpristupneni">
+		<xs:sequence>
+			<xs:element name="IdentifikatorEntita" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						Identifikátor entity. které se zpřístupnění nastavuje.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TypObjektu">
+				<xs:annotation>
+					<xs:documentation>
+						Typ objektu, kterému se zpřístupnění nastavuje.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Komponenta"/>
+						<xs:enumeration value="Dokument"/>
+						<xs:enumeration value="Spis"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PlatnostOd" type="xs:dateTime" maxOccurs="1" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Datum zpřístupnění.
+						Formát data se očekává XmlGregorianCalendar (yyyy-MM-dd'T'HH:mm:ss'Z').
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PlatnostDo" type="xs:dateTime" maxOccurs="1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						Datum expirace zpřístupnění
+						Formát data se očekává XmlGregorianCalendar (yyyy-MM-dd'T'HH:mm:ss'Z').
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Opravneni" maxOccurs="1" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Typ udělovaného oprávnění.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Cteni"/>
+						<xs:enumeration value="Zatrideni"/>
+						<xs:enumeration value="ZatrideniAnalog"/>
+						<xs:enumeration value="ZatrideniDigital"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="IdentifikatorSubjekt" type="xs:string" maxOccurs="1" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Identifikátor systému/uzlu/zpracovatele, kterému se nastavuje zpřístupnění.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ZpristupneniPro" maxOccurs="1" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Zpřístupnění systému/uzlu/zpracovateli.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="System"/>
+						<xs:enumeration value="Uzel"/>
+						<xs:enumeration value="Zpracovatel"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

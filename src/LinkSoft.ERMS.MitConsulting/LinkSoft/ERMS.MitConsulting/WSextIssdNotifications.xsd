@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://mit-consulting.cz/erms-ext"
+           xmlns:tns="http://www.mvcr.cz/nsesss/2024/api" targetNamespace="http://mit-consulting.cz/erms-ext"
+           elementFormDefault="qualified" id="WSextIssdNotifications">
+	<xs:import namespace="http://www.mvcr.cz/nsesss/2024/api" schemaLocation="../../LinkSoft.ERMS/Definition/ermsTypes.xsd"/>
+	<xs:include schemaLocation="WSextInfo.xsd"/>
+	<xs:element name="KomponentaNovaVerze">
+		<xs:annotation>
+			<xs:documentation>
+				Notifikace o vzniku nové verze komponenty.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="KomponentaIdPuvodni" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor původni komponenty (rodič).
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="KomponentaNovaVerzeInfo" type="tKomponentaDoplnujiciData" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Informace o nové komponentě (potomek).
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OdebraniZpristupneni">
+		<xs:annotation>
+			<xs:documentation>
+				Znepřístupnění objektu.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Zpristupneni" type="Zpristupneni" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Odebrání přístupu
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PodpisovaKnihaOdmitnuto">
+		<xs:annotation>
+			<xs:documentation>
+				Notifikace o odmítnutí podepsání.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="KomponentaId" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor komponenty.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Oduvodneni" type="xs:string" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Odůvodnění odmítnutí podpisu.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PodpisovaKnihaPodepsano">
+		<xs:annotation>
+			<xs:documentation>
+				Notifikace o podepsání.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="KomponentaIdPuvodni" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor původní komponenty.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="KomponentaIdPodepsana" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor podepsané komponenty.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PodpisovaKnihaZadostSchvaleni">
+		<xs:annotation>
+			<xs:documentation>
+				Žádost o schválení podepsané komponenty.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="KomponentaIdPodepsana" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor komponenty.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="DokumentId" type="xs:string" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Identifikátor dokumentu.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="DokumentCisloJednaci" type="xs:string" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Číslo jednací dokumentu.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UdeleniZpristupneni">
+		<xs:annotation>
+			<xs:documentation>
+				Znepřístupnění objektu.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Zpristupneni" type="Zpristupneni" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Odebrání přístupu
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Autorizace" type="tns:tAutorizace" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,51 @@
+﻿namespace LinkSoft.ERMS.Interfaces;
+
+public interface IErmsNotificationHandler
+{
+    Task HandleZpravyAsync(Zprava[] zpravy);
+    Task Handle(DokumentExterniSpousteciUdalost dokumentExterniSpousteciUdalost);
+    Task Handle(DokumentOtevreni dokumentOtevreni);
+    Task Handle(DokumentPostoupeni dokumentPostoupeni);
+    Task Handle(DokumentSkartacniNavrh dokumentSkartacniNavrh);
+    Task Handle(DokumentSkartovano dokumentSkartovano);
+    Task Handle(DokumentUprava dokumentUprava);
+    Task Handle(DokumentVlozeniDoSpisu dokumentVlozeniDoSpisu);
+    Task Handle(DokumentVraceni dokumentVraceni);
+    Task Handle(DokumentVyjmutiZeSpisu dokumentVyjmutiZeSpisu);
+    Task Handle(DokumentVyrizeni dokumentVyrizeni);
+    Task Handle(DokumentZalozeni dokumentZalozeni);
+    Task Handle(DokumentZmenaZpracovatele dokumentZmenaZpracovatele);
+    Task Handle(DokumentZruseni dokumentZruseni);
+    Task Handle(DoruceniUprava doruceniUprava);
+    Task Handle(OdkazVytvoreni odkazVytvoreni);
+    Task Handle(OdkazZruseni odkazZruseni);
+    Task Handle(SouborNovaVerze souborNovaVerze);
+    Task Handle(SouborOdemkniFinal souborOdemkniFinal);
+    Task Handle(SouborVlozitKDokumentu souborVlozitKDokumentu);
+    Task Handle(SouborVlozitKVypraveni souborVlozitKVypraveni);
+    Task Handle(SouborVyjmoutZDokumentu souborVyjmoutZDokumentu);
+    Task Handle(SouborVyjmoutZVypraveni souborVyjmoutZVypraveni);
+    Task Handle(SouborZalozeni souborZalozeni);
+    Task Handle(SouborZruseni souborZruseni);
+    Task Handle(SpisExterniSpousteciUdalost spisExterniSpousteciUdalost);
+    Task Handle(SpisOtevreni spisOtevreni);
+    Task Handle(SpisSkartacniNavrh spisSkartacniNavrh);
+    Task Handle(SpisSkartovano spisSkartovano);
+    Task Handle(SpisUprava spisUprava);
+    Task Handle(SpisUzavreni spisUzavreni);
+    Task Handle(SpisVlozeniDoTypovehoSpisu spisVlozeniDoTypovehoSpisu);
+    Task Handle(SpisPostoupeni spisPostoupeni);
+    Task Handle(SpisVraceni spisVraceni);
+    Task Handle(SpisVyjmutiZTypovehoSpisu spisVyjmutiZTypovehoSpisu);
+    Task Handle(SpisVyrizeni spisVyrizeni);
+    Task Handle(SpisZalozeni spisZalozeni);
+    Task Handle(SpisZmenaZpracovatele spisZmenaZpracovatele);
+    Task Handle(SpisZruseni spisZruseni);
+    Task Handle(VypraveniDoruceno vypraveniDoruceno);
+    Task Handle(VypraveniPredatVypravne vypraveniPredatVypravne);
+    Task Handle(VypraveniUprava vypraveniUprava);
+    Task Handle(VypraveniVypraveno vypraveniVypraveno);
+    Task Handle(VypraveniZalozeni vypraveniZalozeni);
+    Task Handle(VypraveniZruseni vypraveniZruseni);
+    Task Handle(tUdalostiSynOstatni ostatni);
+}

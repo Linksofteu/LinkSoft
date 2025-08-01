@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="../../common/common.props" />
+	
+	<PropertyGroup>
+		<PackageId>LinkSoft.ERMS.MitConsulting</PackageId>
+		<Description>Specific ERMS Implementation for MIT Consulting </Description>
+		<PackageReleaseNotes>Init</PackageReleaseNotes>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\LinkSoft.ERMS\LinkSoft.ERMS.csproj" />
+		<PackageReference Include="SoapCore" Version="1.2.1.8" />
+	</ItemGroup>
+</Project>

@@ -1,0 +1,20 @@
+﻿<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.mvcr.cz/nsesss/2024/api"
+           xmlns="http://www.mvcr.cz/nsesss/2024/api"
+           elementFormDefault="qualified">
+	<xs:complexType name="tAutorizace">
+		<xs:annotation>
+			<xs:documentation>This is a placeholder for the actual type defined in LinkSoft.ERMS.</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="tFile">
+		<xs:annotation>
+			<xs:documentation>This is a placeholder for the actual type defined in LinkSoft.ERMS.</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="tFileLinksArray">
+		<xs:annotation>
+			<xs:documentation>This is a placeholder for the actual type defined in LinkSoft.ERMS.</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+</xs:schema>
