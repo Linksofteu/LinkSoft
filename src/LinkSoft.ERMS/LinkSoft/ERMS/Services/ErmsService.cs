@@ -18,9 +18,9 @@ internal class ErmsService : IErmsService
         if (string.IsNullOrEmpty(credentials.AsynEndpointPath))
             throw new InvalidOperationException("asynEndpointPath is not set");
         if (string.IsNullOrEmpty(credentials.Zdroj))
-            throw new InvalidOperationException("_zdroj is not set");
+            throw new InvalidOperationException("_source is not set");
         if (string.IsNullOrEmpty(credentials.Cil))
-            throw new InvalidOperationException("_cil is not set");
+            throw new InvalidOperationException("_target is not set");
 
         Func<IErmsLogger?>? loggerFactory = null;
 

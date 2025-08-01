@@ -15,8 +15,8 @@ public record ErmsCredentials(string SynEndpointPath, string AsynEndpointPath, s
 
 public class ErmsOperationsOptions
 {
-    public string? Zdroj { get; set; }
-    public string? Cil { get; set; }
+    public string? Source { get; set; }
+    public string? Target { get; set; }
 }
 
 public class ErmsOptions

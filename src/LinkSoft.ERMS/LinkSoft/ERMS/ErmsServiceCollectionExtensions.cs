@@ -59,8 +59,8 @@ public static class ErmsServiceCollectionExtensions
             services.Configure(configureOptions);
             services.Configure<ErmsOperationsOptions>(o =>
             {
-                o.Zdroj = options.Credentials?.Zdroj;
-                o.Cil = options.Credentials?.Cil;
+                o.Source = options.Credentials?.Zdroj;
+                o.Target = options.Credentials?.Cil;
             });
         }
 

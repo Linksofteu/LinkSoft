@@ -1,105 +1,103 @@
 ﻿using LinkSoft.ERMS.MITConsulting.Models;
-using LinkSoft.ERMS;
 using LinkSoft.ERMS.Interfaces;
-using LinkSoft.ERMS.MITConsulting;
 using LinkSoft.ERMS.Services;
 
 namespace LinkSoft.ERMS.MITConsulting.ExtensionTypes;
 
 public static class MitDavkaBuilderExtensions
 {
-    public static DavkaBuilder PredatDoPodpisoveKnihy(this DavkaBuilder builder, PredatDoPodpisoveKnihyDto predatDoPodpisoveKnihy, int poradi = 1)
+    public static EventBatchBuilder AddSubmitToSugnatureBookEvent(this EventBatchBuilder builder, SubmitToSignatureBookDto submitData, int order = 1)
     {
-        if (predatDoPodpisoveKnihy == null) throw new ArgumentNullException(nameof(predatDoPodpisoveKnihy));
-        if (string.IsNullOrEmpty(predatDoPodpisoveKnihy.PodepisujiciId))
-            throw new ArgumentNullException(nameof(predatDoPodpisoveKnihy) + "." + nameof(predatDoPodpisoveKnihy.PodepisujiciId));
+        if (submitData == null) throw new ArgumentNullException(nameof(submitData));
+        if (string.IsNullOrEmpty(submitData.SignerId))
+            throw new ArgumentNullException(nameof(submitData) + "." + nameof(submitData.SignerId));
 
-        var udalost = new PredatDoPodpisoveKnihy
+        var @event = new PredatDoPodpisoveKnihy
         {
-            PodepisujiciId = predatDoPodpisoveKnihy.PodepisujiciId,
-            KomponentaId = predatDoPodpisoveKnihy.KomponentaId,
-            Poznamka = predatDoPodpisoveKnihy.Poznamka,
-            VizualizacePodpisu = predatDoPodpisoveKnihy.VizualizacePodpisu != null ? new VizualizacePodpisu
+            PodepisujiciId = submitData.SignerId,
+            KomponentaId = submitData.ComponentId,
+            Poznamka = submitData.Notice,
+            VizualizacePodpisu = submitData.VisualisationData != null ? new VizualizacePodpisu
             {
-                CisloStrany = predatDoPodpisoveKnihy.VizualizacePodpisu.Value.CisloStrany,
-                PoziceX = predatDoPodpisoveKnihy.VizualizacePodpisu.Value.PoziceX,
-                PoziceY = predatDoPodpisoveKnihy.VizualizacePodpisu.Value.PoziceY
+                CisloStrany = submitData.VisualisationData.Value.PageNumber,
+                PoziceX = submitData.VisualisationData.Value.PosX,
+                PoziceY = submitData.VisualisationData.Value.PosY
             } : null
         };
 
-        return builder.AddOstatni(udalost, poradi);
+        return builder.AddEventOther(@event, order);
     }
-    public static DavkaBuilder PredatDoPodpisoveKnihyExterni(this DavkaBuilder builder, PredatDoPodpisoveKnihyDto predatDoPodpisoveKnihy, int poradi = 1)
+    public static EventBatchBuilder AddSubmitToSignatureExternalBookEvent(this EventBatchBuilder builder, SubmitToSignatureBookDto submitData, int order = 1)
     {
-        if (predatDoPodpisoveKnihy == null) throw new ArgumentNullException(nameof(predatDoPodpisoveKnihy));
-        if (string.IsNullOrEmpty(predatDoPodpisoveKnihy.Mail))
-            throw new ArgumentNullException(nameof(predatDoPodpisoveKnihy) + "." + nameof(predatDoPodpisoveKnihy.Mail));
-        if (string.IsNullOrEmpty(predatDoPodpisoveKnihy.Telefon))
-            throw new ArgumentNullException(nameof(predatDoPodpisoveKnihy) + "." + nameof(predatDoPodpisoveKnihy.Telefon));
+        if (submitData == null) throw new ArgumentNullException(nameof(submitData));
+        if (string.IsNullOrEmpty(submitData.Email))
+            throw new ArgumentNullException(nameof(submitData) + "." + nameof(submitData.Email));
+        if (string.IsNullOrEmpty(submitData.Phone))
+            throw new ArgumentNullException(nameof(submitData) + "." + nameof(submitData.Phone));
 
-        var udalost = new PredatDoPodpisoveKnihyExterni
+        var @event = new PredatDoPodpisoveKnihyExterni
         {
-            PodepisujiciMail = predatDoPodpisoveKnihy.Mail,
-            PodepisujiciTelefon = predatDoPodpisoveKnihy.Telefon,
-            KomponentaId = predatDoPodpisoveKnihy.KomponentaId,
-            Poznamka = predatDoPodpisoveKnihy.Poznamka,
-            VizualizacePodpisu = predatDoPodpisoveKnihy.VizualizacePodpisu != null ? new VizualizacePodpisu
+            PodepisujiciMail = submitData.Email,
+            PodepisujiciTelefon = submitData.Phone,
+            KomponentaId = submitData.ComponentId,
+            Poznamka = submitData.Notice,
+            VizualizacePodpisu = submitData.VisualisationData != null ? new VizualizacePodpisu
             {
-                CisloStrany = predatDoPodpisoveKnihy.VizualizacePodpisu.Value.CisloStrany,
-                PoziceX = predatDoPodpisoveKnihy.VizualizacePodpisu.Value.PoziceX,
-                PoziceY = predatDoPodpisoveKnihy.VizualizacePodpisu.Value.PoziceY
+                CisloStrany = submitData.VisualisationData.Value.PageNumber,
+                PoziceX = submitData.VisualisationData.Value.PosX,
+                PoziceY = submitData.VisualisationData.Value.PosY
             } : null
         };
 
-        return builder.AddOstatni(udalost, poradi);
+        return builder.AddEventOther(@event, order);
     }
 
-    public static DavkaBuilder OdebratZPodpisoveKnihy(this DavkaBuilder builder, string idKomponenty, string? oduvodneni = null, int poradi = 1)
+    public static EventBatchBuilder AddRemoveFromSignatureBookEvent(this EventBatchBuilder builder, string componentId, string? reason = null, int order = 1)
     {
-        var udalost = new OdebratZPodpisoveKnihy
+        var @event = new OdebratZPodpisoveKnihy
         {
-            KomponentaId = idKomponenty,
-            Oduvodneni = oduvodneni
+            KomponentaId = componentId,
+            Oduvodneni = reason
         };
 
-        return builder.AddOstatni(udalost, poradi);
+        return builder.AddEventOther(@event, order);
     }
-    public static DavkaBuilder PodpisSchvaleniOdmitnuto(this DavkaBuilder builder, string idKomponenty, string? oduvodneni = null, int poradi = 1)
+    public static EventBatchBuilder AddSignatureRejectEvent(this EventBatchBuilder builder, string componentId, string? reason = null, int order = 1)
     {
         var udalost = new PodpisSchvaleniOdmitnuto
         {
-            KomponentaId = idKomponenty,
-            Oduvodneni = oduvodneni
+            KomponentaId = componentId,
+            Oduvodneni = reason
         };
 
-        return builder.AddOstatni(udalost, poradi);
+        return builder.AddEventOther(udalost, order);
     }
 
-    public static DavkaBuilder PodpisSchvaleniSchvaleno(this DavkaBuilder builder, string idKomponenty, int poradi = 1)
+    public static EventBatchBuilder AddSignatureApproveEvent(this EventBatchBuilder builder, string componentId, int order = 1)
     {
         var udalost = new PodpisSchvaleniSchvaleno
         {
-            KomponentaId = idKomponenty
+            KomponentaId = componentId
         };
 
-        return builder.AddOstatni(udalost, poradi);
+        return builder.AddEventOther(udalost, order);
     }
 
 
-    public static DavkaBuilder PodpisZruseni(this DavkaBuilder builder, string idKomponenty, string? oduvodneni = null, int poradi = 1)
+    public static EventBatchBuilder AddSignatureCancelEvent(this EventBatchBuilder builder, string componentId, string? reason = null, int order = 1)
     {
         var udalost = new PodpisZruseni
         {
-            KomponentaId = idKomponenty,
-            Oduvodneni = oduvodneni
+            KomponentaId = componentId,
+            Oduvodneni = reason
         };
 
-        return builder.AddOstatni(udalost, poradi);
+        return builder.AddEventOther(udalost, order);
     }
 
-    public static DavkaBuilder AddMitCustomOstatni<T>(this DavkaBuilder builder, T obj, int id)
-        where T : IUdalostOstatni
+    public static EventBatchBuilder AddMitCustomOstatni<T>(this EventBatchBuilder builder, T obj, int id)
+        where T : IErmsEventOther
     {
-        return builder.AddOstatni(obj, id);
+        return builder.AddEventOther(obj, id);
     }
 }

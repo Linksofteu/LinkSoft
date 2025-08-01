@@ -2,22 +2,22 @@
 
 public static class ErmsScope
 {
-    private static readonly AsyncLocal<string?> _provedlKdo = new();
+    private static readonly AsyncLocal<string?> _senderId = new();
 
-    public static string ProvedlKdo => _provedlKdo.Value
-        ?? throw new InvalidOperationException("ProvedlKdo není nastaven. Obalte volání do 'using ErmsScope.Use(...)'.");
+    public static string SenderId => _senderId.Value
+        ?? throw new InvalidOperationException("SenderId is not set. Scope call to 'using ErmsScope.Use(...)'.");
 
-    public static IDisposable Use(string provedlKdo)
+    public static IDisposable Use(string senderId)
     {
-        _provedlKdo.Value = provedlKdo;
+        _senderId.Value = senderId;
         return new ScopeDisposable();
     }
 
-    private class ScopeDisposable : IDisposable
+    private sealed class ScopeDisposable : IDisposable
     {
         public void Dispose()
         {
-            _provedlKdo.Value = null;
+            _senderId.Value = null;
         }
     }
 }

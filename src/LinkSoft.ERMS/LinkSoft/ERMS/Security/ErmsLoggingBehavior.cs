@@ -1,6 +1,5 @@
 ﻿using LinkSoft.ERMS.Interfaces;
 using LinkSoft.ERMS.Models;
-using Microsoft.Extensions.Logging;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.ServiceModel.Description;
@@ -34,12 +33,12 @@ public class ErmsLoggingInspector(IErmsLogger _logger) : IClientMessageInspector
             // add statusReply
             entry.ResponseStatusCode = reply.Properties.TryGetValue(HttpResponseMessageProperty.Name, out var httpResponse)
                 ? (int)((HttpResponseMessageProperty)httpResponse).StatusCode
-                : 0; // pokud není HTTP odpověď, nastavíme 0
+                : 0; // 0 if not available
             _logger.LogSoapExchangeAsync(entry).GetAwaiter().GetResult();
         }
         else
         {
-            // fallback – mělo by se stát jen při chybě v DI
+            // fallback - if correlationState is not SoapLogEntry, we log the response with a warning
             _logger.LogSoapExchangeAsync(new SoapLogEntry
             {
                 Timestamp = DateTime.Now,
@@ -51,7 +50,6 @@ public class ErmsLoggingInspector(IErmsLogger _logger) : IClientMessageInspector
 
     public object BeforeSendRequest(ref Message request, IClientChannel channel)
     {
-
         var requestCopy = request.ToString(); // POZOR: request je forward-only, takže string copy dřív než bude čteno dál
 
         return new SoapLogEntry

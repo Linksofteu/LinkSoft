@@ -1,8 +1,8 @@
 ﻿namespace LinkSoft.ERMS;
 
-public interface IPrideleneSeznam;
+public interface ICaseFileAssignment;
 
-public partial class tProfilDokumentuSeznam : IPrideleneSeznam { }
-public partial class tProfilSoucastiTypovehoSpisuSeznam : IPrideleneSeznam { }
-public partial class tProfilSpisuSeznam : IPrideleneSeznam { }
-public partial class tProfilTypovehoSpisuSeznam : IPrideleneSeznam { }
+public partial class tProfilDokumentuSeznam : ICaseFileAssignment { }
+public partial class tProfilSoucastiTypovehoSpisuSeznam : ICaseFileAssignment { }
+public partial class tProfilSpisuSeznam : ICaseFileAssignment { }
+public partial class tProfilTypovehoSpisuSeznam : ICaseFileAssignment { }

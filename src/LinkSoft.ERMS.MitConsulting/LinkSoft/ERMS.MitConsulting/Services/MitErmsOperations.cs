@@ -8,49 +8,49 @@ namespace LinkSoft.ERMS.MITConsulting.Services;
 
 public class MitErmsOperations(IErmsService ermsService, IOptions<ErmsOperationsOptions> options) : ErmsOperations(ermsService, options)
 {
-    public Task<Result> PredatDoPodpisoveKnihy(PredatDoPodpisoveKnihyDto dto)
+    public Task<Result> SubmitToSignatureBook(SubmitToSignatureBookDto dto)
     {
-        var builder = new DavkaBuilder()
-            .PredatDoPodpisoveKnihy(dto);
+        var builder = new EventBatchBuilder()
+            .AddSubmitToSugnatureBookEvent(dto);
 
-        return OdeslatUdalostiSyn(builder);
+        return SendEventsSyn(builder);
     }
 
-    public Task<Result> PredatDoPodpisoveKnihyExterni(PredatDoPodpisoveKnihyDto dto)
+    public Task<Result> SubmitToExternalSignatureBook(SubmitToSignatureBookDto dto)
     {
-        var builder = new DavkaBuilder()
-            .PredatDoPodpisoveKnihyExterni(dto);
+        var builder = new EventBatchBuilder()
+            .AddSubmitToSignatureExternalBookEvent(dto);
 
-        return OdeslatUdalostiSyn(builder);
+        return SendEventsSyn(builder);
     }
 
-    public Task<Result> OdebratZPodpisoveKnihy(string idKomponenty, string? oduvodneni = null)
+    public Task<Result> RemoveFromSignatureBook(string componentId, string? reason = null)
     {
-        var builder = new DavkaBuilder()
-            .OdebratZPodpisoveKnihy(idKomponenty, oduvodneni);
+        var builder = new EventBatchBuilder()
+            .AddRemoveFromSignatureBookEvent(componentId, reason);
 
-        return OdeslatUdalostiSyn(builder);
+        return SendEventsSyn(builder);
     }
-    public Task<Result> PodpisSchvaleniSchvaleno(string idKomponenty)
+    public Task<Result> ApproveSignatureExternal(string componentId)
     {
-        var builder = new DavkaBuilder()
-            .PodpisSchvaleniSchvaleno(idKomponenty);
+        var builder = new EventBatchBuilder()
+            .AddSignatureApproveEvent(componentId);
 
-        return OdeslatUdalostiSyn(builder);
+        return SendEventsSyn(builder);
     }
-    public Task<Result> PodpisSchvaleniOdmitnuto(string idKomponenty, string? oduvodneni = null)
+    public Task<Result> RejectSignatureExternal(string componentId, string? reason = null)
     {
-        var builder = new DavkaBuilder()
-            .PodpisSchvaleniOdmitnuto(idKomponenty, oduvodneni);
+        var builder = new EventBatchBuilder()
+            .AddSignatureRejectEvent(componentId, reason);
 
-        return OdeslatUdalostiSyn(builder);
+        return SendEventsSyn(builder);
     }
 
-    public Task<Result> PodpisZruseni(string idKomponenty, string? oduvodneni = null)
+    public Task<Result> CancelSignatureRequest(string componentId, string? reason = null)
     {
-        var builder = new DavkaBuilder()
-            .PodpisZruseni(idKomponenty, oduvodneni);
+        var builder = new EventBatchBuilder()
+            .AddSignatureCancelEvent(componentId, reason);
 
-        return OdeslatUdalostiSyn(builder);
+        return SendEventsSyn(builder);
     }
 }

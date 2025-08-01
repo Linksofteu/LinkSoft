@@ -2222,7 +2222,7 @@ namespace LinkSoft.ERMS.MITConsulting {
         private tAutorizace autorizaceField;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ZalozeniSouboru")]
+        [System.Xml.Serialization.XmlElementAttribute("FileCreation")]
         public tFile[] ZalozeniSouboru
         {
             get

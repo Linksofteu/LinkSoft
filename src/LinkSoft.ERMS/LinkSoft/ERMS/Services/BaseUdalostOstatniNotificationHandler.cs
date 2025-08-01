@@ -7,12 +7,12 @@ namespace LinkSoft.ERMS.Services;
 public abstract class BaseUdalostOstatniNotificationHandler : IErmsNotificationHandler
 {
     protected abstract Dictionary<string, Type> KnownUdalostiTypes { get; }
-    protected IUdalostOstatni[] Translate(tUdalostiSynOstatni udalosti, Dictionary<string, Type> typeMap)
+    protected IErmsEventOther[] Translate(tUdalostiSynOstatni udalosti, Dictionary<string, Type> typeMap)
     {
         if (udalosti?.Any == null || udalosti.Any.Length == 0)
-            return Array.Empty<IUdalostOstatni>();
+            return Array.Empty<IErmsEventOther>();
 
-        var result = new List<IUdalostOstatni>();
+        var result = new List<IErmsEventOther>();
 
         foreach (var element in udalosti.Any)
         {
@@ -22,7 +22,7 @@ public abstract class BaseUdalostOstatniNotificationHandler : IErmsNotificationH
                 {
                     var serializer = new XmlSerializer(type, element.NamespaceURI);
                     using var reader = new XmlNodeReader(element);
-                    if (serializer.Deserialize(reader) is IUdalostOstatni parsed)
+                    if (serializer.Deserialize(reader) is IErmsEventOther parsed)
                     {
                         result.Add(parsed);
                     }

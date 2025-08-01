@@ -4,21 +4,21 @@ using LinkSoft.ERMS.Interfaces;
 namespace LinkSoft.ERMS.MITConsulting;
 
 // Notifikace
-partial class KomponentaNovaVerze : IUdalostOstatni { }
-partial class OdebraniZpristupneni : IUdalostOstatni { }
-partial class PodpisovaKnihaOdmitnuto : IUdalostOstatni { }
-partial class PodpisovaKnihaPodepsano : IUdalostOstatni { }
-partial class PodpisovaKnihaZadostSchvaleni : IUdalostOstatni { }
-partial class UdeleniZpristupneni : IUdalostOstatni, IErmsAutorizace { }
+partial class KomponentaNovaVerze : IErmsEventOther { }
+partial class OdebraniZpristupneni : IErmsEventOther { }
+partial class PodpisovaKnihaOdmitnuto : IErmsEventOther { }
+partial class PodpisovaKnihaPodepsano : IErmsEventOther { }
+partial class PodpisovaKnihaZadostSchvaleni : IErmsEventOther { }
+partial class UdeleniZpristupneni : IErmsEventOther, IErmsAuthorization { }
 
 
 // Udalosti ISSD->ERMS
-partial class ExterniCiselnikNaplneni : IUdalostOstatni { }
-partial class OdebratZPodpisoveKnihy : IUdalostOstatni, IErmsAutorizace { }
-partial class OdebratZpristupneni : IUdalostOstatni, IErmsAutorizace { }
-partial class PodpisZruseni : IUdalostOstatni, IErmsAutorizace { }
-partial class PredatDoPodpisoveKnihy : IUdalostOstatni, IErmsAutorizace { }
-partial class PredatDoPodpisoveKnihyExterni : IUdalostOstatni, IErmsAutorizace { }
-partial class PodpisSchvaleniOdmitnuto : IUdalostOstatni, IErmsAutorizace { }
-partial class PodpisSchvaleniSchvaleno : IUdalostOstatni, IErmsAutorizace { }
-partial class UdelitZpristupneni : IUdalostOstatni, IErmsAutorizace { }
+partial class ExterniCiselnikNaplneni : IErmsEventOther { }
+partial class OdebratZPodpisoveKnihy : IErmsEventOther, IErmsAuthorization { }
+partial class OdebratZpristupneni : IErmsEventOther, IErmsAuthorization { }
+partial class PodpisZruseni : IErmsEventOther, IErmsAuthorization { }
+partial class PredatDoPodpisoveKnihy : IErmsEventOther, IErmsAuthorization { }
+partial class PredatDoPodpisoveKnihyExterni : IErmsEventOther, IErmsAuthorization { }
+partial class PodpisSchvaleniOdmitnuto : IErmsEventOther, IErmsAuthorization { }
+partial class PodpisSchvaleniSchvaleno : IErmsEventOther, IErmsAuthorization { }
+partial class UdelitZpristupneni : IErmsEventOther, IErmsAuthorization { }

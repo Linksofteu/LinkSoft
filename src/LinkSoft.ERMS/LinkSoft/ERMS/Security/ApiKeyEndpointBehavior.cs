@@ -24,10 +24,10 @@ public class ApiKeyMessageInspector : IClientMessageInspector
 
         var httpRequest = (HttpRequestMessageProperty)request.Properties[HttpRequestMessageProperty.Name];
 
-        // Přidej x-api-key
+        // Add the API key to the request headers
         httpRequest.Headers["x-api-key"] = _apiKey;
 
-        return null;
+        return null!;
     }
 
     public void AfterReceiveReply(ref Message reply, object correlationState) { }
@@ -48,7 +48,7 @@ public class ApiKeyEndpointBehavior : IEndpointBehavior
         clientRuntime.ClientMessageInspectors.Add(new ApiKeyMessageInspector(_apiKey));
     }
 
-    // Neimplementované části:
+    // The following methods are required by the IEndpointBehavior interface but are not used in this implementation.
     public void AddBindingParameters(ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) { }
     public void ApplyDispatchBehavior(ServiceEndpoint endpoint, EndpointDispatcher endpointDispatcher) { }
     public void Validate(ServiceEndpoint endpoint) { }

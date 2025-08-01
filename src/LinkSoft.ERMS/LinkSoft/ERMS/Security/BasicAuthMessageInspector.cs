@@ -27,7 +27,7 @@ public class BasicAuthMessageInspector : IClientMessageInspector
         string authHeader = Convert.ToBase64String(Encoding.ASCII.GetBytes($"{_username}:{_password}"));
         httpRequest.Headers["Authorization"] = $"Basic {authHeader}";
 
-        return null;
+        return null!;
     }
 
     public void AfterReceiveReply(ref Message reply, object correlationState) { }

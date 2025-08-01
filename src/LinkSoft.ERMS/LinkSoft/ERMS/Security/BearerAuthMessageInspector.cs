@@ -23,7 +23,7 @@ public class BearerAuthMessageInspector : IClientMessageInspector
         var httpRequest = (HttpRequestMessageProperty)request.Properties[HttpRequestMessageProperty.Name];
         httpRequest.Headers["Authorization"] = $"Bearer {_token}";
 
-        return null;
+        return null!;
     }
 
     public void AfterReceiveReply(ref Message reply, object correlationState) { }

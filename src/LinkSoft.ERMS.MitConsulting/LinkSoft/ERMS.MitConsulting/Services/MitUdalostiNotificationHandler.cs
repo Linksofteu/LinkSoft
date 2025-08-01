@@ -33,7 +33,7 @@ public abstract class MitUdalostiNotificationHandler : BaseUdalostOstatniNotific
                 PodpisovaKnihaZadostSchvaleni zadostSchvaleni => Handle(zadostSchvaleni),
                 UdeleniZpristupneni udeleni => Handle(udeleni),
                 _ => throw new NotSupportedException(
-                    $"Nepodporovaný typ IUdalostOstatni: {parsed.GetType().Name}")
+                    $"Nepodporovaný typ IErmsEventOther: {parsed.GetType().Name}")
             };
             await task;
         }
