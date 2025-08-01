@@ -5,10 +5,8 @@ namespace LinkSoft.ERMS;
 
 partial class tUdalostiSynOstatni : IErmsEvent 
 {
-    private IErmsEventOther eventOther;
-
     [XmlIgnore]
-    public IErmsEventOther EventOther { get => eventOther; set => eventOther = value; }
+    public IErmsEventOther? EventOther { get; set; }
 }
 partial class DokumentExterniSpousteciUdalost : IErmsEvent, IErmsAuthorization { }
 partial class DokumentOtevreni : IErmsEvent, IErmsAuthorization { }
