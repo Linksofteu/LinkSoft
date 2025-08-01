@@ -4,7 +4,7 @@ using LinkSoft.ERMS.Interfaces;
 
 namespace LinkSoft.ERMS.Services;
 
-public abstract class BaseUdalostOstatniNotificationHandler : IErmsNotificationHandler
+public abstract class BaseEventOtherNotificationHandler : IErmsNotificationHandler
 {
     protected abstract Dictionary<string, Type> KnownUdalostiTypes { get; }
     protected IErmsEventOther[] Translate(tUdalostiSynOstatni udalosti, Dictionary<string, Type> typeMap)
