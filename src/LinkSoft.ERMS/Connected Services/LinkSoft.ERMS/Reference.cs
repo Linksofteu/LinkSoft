@@ -16,7 +16,7 @@ namespace LinkSoft.ERMS
     public interface PortSyn
     {
 
-        [System.ServiceModel.OperationContractAttribute(Action = "DocumentCreation", ReplyAction = "*")]
+        [System.ServiceModel.OperationContractAttribute(Action = "DokumentZalozeni", ReplyAction = "*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
         System.Threading.Tasks.Task<LinkSoft.ERMS.DokumentZalozeniResponse1> DokumentZalozeniAsync(LinkSoft.ERMS.DokumentZalozeniRequest1 request);
 
@@ -40,7 +40,7 @@ namespace LinkSoft.ERMS
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
         System.Threading.Tasks.Task<LinkSoft.ERMS.ProfilSpisuZadostResponse1> ProfilSpisuZadostAsync(LinkSoft.ERMS.ProfilSpisuZadostRequest1 request);
 
-        [System.ServiceModel.OperationContractAttribute(Action = "FileRequest", ReplyAction = "*")]
+        [System.ServiceModel.OperationContractAttribute(Action = "SouborZadost", ReplyAction = "*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
         System.Threading.Tasks.Task<LinkSoft.ERMS.SouborZadostResponse1> SouborZadostAsync(LinkSoft.ERMS.SouborZadostRequest1 request);
 
@@ -60,7 +60,7 @@ namespace LinkSoft.ERMS
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
         System.Threading.Tasks.Task<LinkSoft.ERMS.FunkcniMistaResponse1> FunkcniMistaAsync(LinkSoft.ERMS.FunkcniMistaRequest1 request);
 
-        [System.ServiceModel.OperationContractAttribute(Action = "GetCaseFileAssignments", ReplyAction = "*")]
+        [System.ServiceModel.OperationContractAttribute(Action = "PrideleneSeznam", ReplyAction = "*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
         System.Threading.Tasks.Task<LinkSoft.ERMS.PrideleneSeznamResponse1> PrideleneSeznamAsync(LinkSoft.ERMS.PrideleneSeznamRequest1 request);
 
@@ -229,11 +229,11 @@ namespace LinkSoft.ERMS
         [System.Xml.Serialization.XmlElementAttribute("DokumentSkartacniNavrh", typeof(DokumentSkartacniNavrh), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentSkartovano", typeof(DokumentSkartovano), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentUprava", typeof(DokumentUprava), Order = 0)]
-        [System.Xml.Serialization.XmlElementAttribute("DocumentAttachToCaseFile", typeof(DokumentVlozeniDoSpisu), Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("DokumentVlozeniDoSpisu", typeof(DokumentVlozeniDoSpisu), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentVraceni", typeof(DokumentVraceni), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentVyjmutiZeSpisu", typeof(DokumentVyjmutiZeSpisu), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentVyrizeni", typeof(DokumentVyrizeni), Order = 0)]
-        [System.Xml.Serialization.XmlElementAttribute("DocumentCreation", typeof(DokumentZalozeni), Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("DokumentZalozeni", typeof(DokumentZalozeni), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentZmenaZpracovatele", typeof(DokumentZmenaZpracovatele), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentZruseni", typeof(DokumentZruseni), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DoruceniUprava", typeof(DoruceniUprava), Order = 0)]
@@ -260,7 +260,7 @@ namespace LinkSoft.ERMS
         [System.Xml.Serialization.XmlElementAttribute("SpisVyjmutiZTypovehoSpisu", typeof(SpisVyjmutiZTypovehoSpisu), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("SpisVyrizeni", typeof(SpisVyrizeni), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("SpisZalozeni", typeof(SpisZalozeni), Order = 0)]
-        [System.Xml.Serialization.XmlElementAttribute("AddCaseFileProcessorChangeEvent", typeof(SpisZmenaZpracovatele), Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("SpisZmenaZpracovatele", typeof(SpisZmenaZpracovatele), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("SpisZruseni", typeof(SpisZruseni), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("VypraveniDoruceno", typeof(VypraveniDoruceno), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("VypraveniPredatVypravne", typeof(VypraveniPredatVypravne), Order = 0)]
@@ -8729,7 +8729,7 @@ namespace LinkSoft.ERMS
         private object[] itemsField;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DocumentId", typeof(tDokumentId), Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("DokumentId", typeof(tDokumentId), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("SpisId", typeof(tSpisId), Order = 0)]
         public object[] Items
         {
@@ -9042,7 +9042,7 @@ namespace LinkSoft.ERMS
         private object[] itemsField;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DocumentId", typeof(tDokumentId), Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("DokumentId", typeof(tDokumentId), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("SpisId", typeof(tSpisId), Order = 0)]
         public object[] Items
         {
@@ -13466,7 +13466,7 @@ namespace LinkSoft.ERMS
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("FileDetails", typeof(tFile), Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute("Soubor", typeof(tFile), Order = 1)]
         [System.Xml.Serialization.XmlElementAttribute("SouborOdkaz", typeof(tFileLink), Order = 1)]
         public object Item
         {
@@ -14315,7 +14315,7 @@ namespace LinkSoft.ERMS
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("FileDetails", typeof(tFile), Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute("Soubor", typeof(tFile), Order = 1)]
         [System.Xml.Serialization.XmlElementAttribute("SouborOdkaz", typeof(tFileLink), Order = 1)]
         public object Item
         {
@@ -19576,11 +19576,11 @@ namespace LinkSoft.ERMS
         [System.Xml.Serialization.XmlElementAttribute("DokumentSkartacniNavrh", typeof(DokumentSkartacniNavrh), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentSkartovano", typeof(DokumentSkartovano), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentUprava", typeof(DokumentUprava), Order = 0)]
-        [System.Xml.Serialization.XmlElementAttribute("DocumentAttachToCaseFile", typeof(DokumentVlozeniDoSpisu), Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("DokumentVlozeniDoSpisu", typeof(DokumentVlozeniDoSpisu), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentVraceni", typeof(DokumentVraceni), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentVyjmutiZeSpisu", typeof(DokumentVyjmutiZeSpisu), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentVyrizeni", typeof(DokumentVyrizeni), Order = 0)]
-        [System.Xml.Serialization.XmlElementAttribute("DocumentCreation", typeof(DokumentZalozeni), Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("DokumentZalozeni", typeof(DokumentZalozeni), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentZmenaZpracovatele", typeof(DokumentZmenaZpracovatele), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentZruseni", typeof(DokumentZruseni), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DoruceniUprava", typeof(DoruceniUprava), Order = 0)]
@@ -19607,7 +19607,7 @@ namespace LinkSoft.ERMS
         [System.Xml.Serialization.XmlElementAttribute("SpisVyjmutiZTypovehoSpisu", typeof(SpisVyjmutiZTypovehoSpisu), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("SpisVyrizeni", typeof(SpisVyrizeni), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("SpisZalozeni", typeof(SpisZalozeni), Order = 0)]
-        [System.Xml.Serialization.XmlElementAttribute("AddCaseFileProcessorChangeEvent", typeof(SpisZmenaZpracovatele), Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("SpisZmenaZpracovatele", typeof(SpisZmenaZpracovatele), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("SpisZruseni", typeof(SpisZruseni), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("VypraveniDoruceno", typeof(VypraveniDoruceno), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("VypraveniPredatVypravne", typeof(VypraveniPredatVypravne), Order = 0)]
@@ -23259,11 +23259,11 @@ namespace LinkSoft.ERMS
         [System.Xml.Serialization.XmlElementAttribute("DokumentSkartacniNavrh", typeof(DokumentSkartacniNavrh), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentSkartovano", typeof(DokumentSkartovano), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentUprava", typeof(DokumentUprava), Order = 0)]
-        [System.Xml.Serialization.XmlElementAttribute("DocumentAttachToCaseFile", typeof(DokumentVlozeniDoSpisu), Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("DokumentVlozeniDoSpisu", typeof(DokumentVlozeniDoSpisu), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentVraceni", typeof(DokumentVraceni), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentVyjmutiZeSpisu", typeof(DokumentVyjmutiZeSpisu), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentVyrizeni", typeof(DokumentVyrizeni), Order = 0)]
-        [System.Xml.Serialization.XmlElementAttribute("DocumentCreation", typeof(DokumentZalozeni), Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("DokumentZalozeni", typeof(DokumentZalozeni), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentZmenaZpracovatele", typeof(DokumentZmenaZpracovatele), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DokumentZruseni", typeof(DokumentZruseni), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("DoruceniUprava", typeof(DoruceniUprava), Order = 0)]
@@ -23290,7 +23290,7 @@ namespace LinkSoft.ERMS
         [System.Xml.Serialization.XmlElementAttribute("SpisVyjmutiZTypovehoSpisu", typeof(SpisVyjmutiZTypovehoSpisu), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("SpisVyrizeni", typeof(SpisVyrizeni), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("SpisZalozeni", typeof(SpisZalozeni), Order = 0)]
-        [System.Xml.Serialization.XmlElementAttribute("AddCaseFileProcessorChangeEvent", typeof(SpisZmenaZpracovatele), Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("SpisZmenaZpracovatele", typeof(SpisZmenaZpracovatele), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("SpisZruseni", typeof(SpisZruseni), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("VypraveniDoruceno", typeof(VypraveniDoruceno), Order = 0)]
         [System.Xml.Serialization.XmlElementAttribute("VypraveniPredatVypravne", typeof(VypraveniPredatVypravne), Order = 0)]
