@@ -20,10 +20,6 @@ public class ErmsOperations
         _source = options.Value.Source ?? throw new ArgumentNullException(nameof(options), "Source is not set");
         _target = options.Value.Target ?? throw new ArgumentNullException(nameof(options), "Target is not set");
     }
-
-    public static tIdentifikator GenerateIdentifier(string prefix = "SZ.AZL-", string zdroj = "ZMENLI") 
-        => new tIdentifikator() { HodnotaID = prefix + Guid.NewGuid().ToString("N"), ZdrojID = zdroj };
-
     public async Task<Result> WsTest()
     {
         var request = new WsTestRequest
