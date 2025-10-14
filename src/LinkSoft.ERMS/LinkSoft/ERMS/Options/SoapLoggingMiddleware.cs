@@ -73,7 +73,10 @@ public class SoapLoggingMiddleware
             await _next(context);
 
             newResponseBody.Seek(0, SeekOrigin.Begin);
-            logEntry.ResponseXml = await new StreamReader(newResponseBody).ReadToEndAsync();
+            var rawResponse = await new StreamReader(newResponseBody).ReadToEndAsync();
+            logEntry.ResponseXml = Base64SanitizerRegex.Replace(
+                rawResponse,
+                $"<$1{Base64ElementName}>[BASE64_REPLACED]</$1{Base64ElementName}>");
             logEntry.ResponseStatusCode = context.Response.StatusCode;
 
             newResponseBody.Seek(0, SeekOrigin.Begin);
