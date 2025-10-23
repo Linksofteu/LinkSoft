@@ -34,7 +34,8 @@ public class WcfClientProxy<TClient, TInterface> : IWcfClientProxy<TClient>
         {
             MaxBufferSize = int.MaxValue,
             ReaderQuotas = System.Xml.XmlDictionaryReaderQuotas.Max,
-            MaxReceivedMessageSize = int.MaxValue
+            MaxReceivedMessageSize = int.MaxValue,
+            SendTimeout = TimeSpan.FromMinutes(3),
         };
 
         var client = (TClient)Activator.CreateInstance(typeof(TClient), binding, _endpoint)!;
