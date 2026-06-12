@@ -13,6 +13,7 @@ internal static class MiniWordTemplateRenderer
         cancellationToken.ThrowIfCancellationRequested();
 
         var normalizedTemplate = SquareBracketTagNormalizer.Normalize(templatePath);
-        MiniWord.SaveAsByTemplate(outputDocxPath, normalizedTemplate, templateData);
+        var expandedTemplate = IndexedArrayRowExpander.Expand(normalizedTemplate, templateData);
+        MiniWord.SaveAsByTemplate(outputDocxPath, expandedTemplate, templateData);
     }
 }
