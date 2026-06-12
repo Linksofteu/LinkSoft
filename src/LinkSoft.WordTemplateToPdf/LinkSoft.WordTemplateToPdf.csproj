@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="../../common/common.props" />
+
+  <PropertyGroup>
+    <PackageId>LinkSoft.WordTemplateToPdf</PackageId>
+    <Description>Fills DOCX templates from JSON data and converts the generated document to PDF using LibreOffice.</Description>
+    <PackageReleaseNotes>Initial Word template to PDF converter.</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.1.1" />
+    <PackageReference Include="MiniWord" Version="0.9.2" />
+  </ItemGroup>
+</Project>
