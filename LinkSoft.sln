@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkSoft.ERMS", "src\LinkSo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkSoft.ERMS.MitConsulting", "src\LinkSoft.ERMS.MitConsulting\LinkSoft.ERMS.MitConsulting.csproj", "{FEAEF926-9C81-4B8B-AB6A-8392229E2E37}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkSoft.WordTemplateToPdf", "src\LinkSoft.WordTemplateToPdf\LinkSoft.WordTemplateToPdf.csproj", "{CA4A0C84-BC47-411B-849D-3D63250E47DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{FEAEF926-9C81-4B8B-AB6A-8392229E2E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEAEF926-9C81-4B8B-AB6A-8392229E2E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEAEF926-9C81-4B8B-AB6A-8392229E2E37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA4A0C84-BC47-411B-849D-3D63250E47DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA4A0C84-BC47-411B-849D-3D63250E47DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA4A0C84-BC47-411B-849D-3D63250E47DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA4A0C84-BC47-411B-849D-3D63250E47DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{A5C64440-E010-42E4-9D26-C5416BB61788} = {11673E6B-FE74-4BE2-B76A-10195296A241}
 		{8CB37741-9ED1-44A7-AB4D-E2C1DA6B865B} = {11673E6B-FE74-4BE2-B76A-10195296A241}
 		{FEAEF926-9C81-4B8B-AB6A-8392229E2E37} = {11673E6B-FE74-4BE2-B76A-10195296A241}
+		{CA4A0C84-BC47-411B-849D-3D63250E47DB} = {11673E6B-FE74-4BE2-B76A-10195296A241}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EE922CF5-4963-4731-B555-28828DFC042D}
