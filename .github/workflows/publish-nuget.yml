@@ -6,7 +6,7 @@ on:
       - 'v*.*.*'
 
 env:
-  DOTNET_VERSION: '9.0'
+  DOTNET_VERSION: '10.0'
 
 # Explicitly declare permissions
 permissions:
